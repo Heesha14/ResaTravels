@@ -7,4 +7,17 @@
     <string name="h_user_place_to_vehicle">Rent A Vehicle</string>
     <string name="h_user_search_by_vehicle">Search by Vehicle</string>
     <string name="h_user_click_vehicle_to_booking">Book Now</string>
+    <string name="h_user_book_form_field_place">Place</string>
+    <string name="h_user_book_form_field_vehicle">Vehicle</string>
+    <string name="h_user_book_form_field_plateno">Register Plate</string>
+    <string name="h_user_book_form_field_adulno">Number of adults</string>
+    <string name="h_user_book_form_field_childno">Number of Children</string>
+    <string name="h_user_book_form_field_days">Number of days</string>
+    <string name="h_user_book_form_input_place">Enter Destination</string>
+    <string name="h_user_book_form_input_vehicle">Enter type of vehicle</string>
+    <string name="h_user_book_form_input_plateNo">Enter registration plate </string>
+    <string name="h_user_book_form_confirm">Confirm</string>
+    <string name="h_user_book_form_cancel">Cancel</string>
+    <string name="h_user_book_form_input_date">Enter date</string>
+    <string name="h_user_book_form_field_date">Check In Date</string>
 </resources>

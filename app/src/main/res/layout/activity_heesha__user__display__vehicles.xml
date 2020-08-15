@@ -179,8 +179,12 @@
         android:layout_height="wrap_content"
         android:hint="@string/h_user_click_vehicle_to_booking"
         android:textSize="18sp"
-        tools:layout_editor_absoluteX="142dp"
-        tools:layout_editor_absoluteY="663dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.524"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
