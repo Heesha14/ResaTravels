@@ -1,4 +1,12 @@
 <resources>
     <string name="app_name">ResaTravels</string>
     <string name="button">Button</string>
+    <string name="SearchUsing">Search Using Location</string>
+    <string name="Hotel1">Hotel 1</string>
+    <string name="Hotel2">Hotel 2</string>
+    <string name="Hotel3">Hotel3</string>
+    <string name="marino_beach_colombo">Marino Beach Colombo</string>
+    <string name="TheOceanColombo">"The Ocean Colombo "</string>
+    <string name="JetwingColomboSevenOpensinnewwindow">Jetwing Colombo Seven Opens in new window</string>
+    <string name="Colombo">Colombo</string>
 </resources>
