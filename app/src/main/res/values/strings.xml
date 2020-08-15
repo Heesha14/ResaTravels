@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">ResaTravels</string>
+    <string name="h_home_to_place">Rides in Places</string>
+    <string name="h_user_place_name_galle">Galle</string>
+    <string name="h_user_place_name_kandy">Kandy</string>
+    <string name="h_user_place_to_vehicle_courage_text">Rent a vehicle to enjoy the beauty of the place in full spirit without any hustle and bustle...</string>
+    <string name="h_user_place_to_vehicle">Rent A Vehicle</string>
+    <string name="h_user_search_by_vehicle">Search by Vehicle</string>
+    <string name="h_user_click_vehicle_to_booking">Book Now</string>
 </resources>
