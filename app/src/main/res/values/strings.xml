@@ -30,4 +30,9 @@
     <string name="Delete_btn">Delete</string>
     <string name="Update_Btn">Update</string>
     <string name="SearchUsingID">Search Using ID Number</string>
+    <string name="Mitsubishi4DR5J44LONGWHEEL1980">Mitsubishi 4DR5 J44 LONG WHEEL 1980</string>
+    <string name="passenger_count">Passenger count :</string>
+    <string name="price_per_day">Price Per Day :</string>
+    <string name="location">Location :</string>
+    <string name="book">Book</string>
 </resources>

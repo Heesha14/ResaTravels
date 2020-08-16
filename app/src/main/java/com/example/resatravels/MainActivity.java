@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent= new Intent(MainActivity.this, Registration.class);
+                Intent intent= new Intent(MainActivity.this, All_Safari_Vehicle.class);
                 startActivity(intent);
             }
 
@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent= new Intent(MainActivity.this, Admin_For_All_Hotels.class);
+                Intent intent= new Intent(MainActivity.this, register_Vehicle_safari.class);
                 startActivity(intent);
             }
 

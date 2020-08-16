@@ -7,6 +7,94 @@
     android:background="@drawable/header"
     tools:context=".Admin_For_All_Hotels">
 
+    <View
+        android:id="@+id/view43"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/ic_baseline_home_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/view44"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.096" />
+
+    <View
+        android:id="@+id/view47"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/ic_baseline_person_pin_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.096" />
+
+    <View
+        android:id="@+id/view44"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="36dp"
+        android:background="@drawable/ic_baseline_location_on_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/view45"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.096" />
+
+    <View
+        android:id="@+id/view35"
+        android:layout_width="158dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/untitled_2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.004" />
+
+    <View
+        android:id="@+id/view60"
+        android:layout_width="58dp"
+        android:layout_height="61dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="1dp"
+        android:background="@drawable/untitled_2_copy"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <View
+        android:id="@+id/view42"
+        android:layout_width="53dp"
+        android:layout_height="53dp"
+        android:background="@drawable/ic_baseline_menu_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.977"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.004" />
+
+    <View
+        android:id="@+id/view46"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="39dp"
+        android:background="@drawable/ic_baseline_search_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/view47"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.096" />
+
+    <View
+        android:id="@+id/view45"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="38dp"
+        android:background="@drawable/ic_baseline_shopping_cart_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/view46"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.096" />
+
     <Button
         android:id="@+id/button"
         android:layout_width="47dp"
@@ -193,94 +281,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.919" />
-
-    <View
-        android:id="@+id/view60"
-        android:layout_width="58dp"
-        android:layout_height="61dp"
-        android:layout_marginEnd="6dp"
-        android:layout_marginBottom="1dp"
-        android:background="@drawable/untitled_2_copy"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <View
-        android:id="@+id/view35"
-        android:layout_width="158dp"
-        android:layout_height="44dp"
-        android:layout_marginStart="8dp"
-        android:background="@drawable/untitled_2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.004" />
-
-    <View
-        android:id="@+id/view42"
-        android:layout_width="53dp"
-        android:layout_height="53dp"
-        android:background="@drawable/ic_baseline_menu_24"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.977"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.004" />
-
-    <View
-        android:id="@+id/view43"
-        android:layout_width="45dp"
-        android:layout_height="45dp"
-        android:layout_marginEnd="32dp"
-        android:background="@drawable/ic_baseline_home_24"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/view44"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.096" />
-
-    <View
-        android:id="@+id/view44"
-        android:layout_width="45dp"
-        android:layout_height="45dp"
-        android:layout_marginEnd="36dp"
-        android:background="@drawable/ic_baseline_location_on_24"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/view45"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.096" />
-
-    <View
-        android:id="@+id/view45"
-        android:layout_width="45dp"
-        android:layout_height="45dp"
-        android:layout_marginEnd="38dp"
-        android:background="@drawable/ic_baseline_shopping_cart_24"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/view46"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.096" />
-
-    <View
-        android:id="@+id/view46"
-        android:layout_width="45dp"
-        android:layout_height="45dp"
-        android:layout_marginEnd="39dp"
-        android:background="@drawable/ic_baseline_search_24"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/view47"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.096" />
-
-    <View
-        android:id="@+id/view47"
-        android:layout_width="45dp"
-        android:layout_height="45dp"
-        android:layout_marginEnd="24dp"
-        android:background="@drawable/ic_baseline_person_pin_24"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.096" />
 
     <Button
         android:id="@+id/button9"
