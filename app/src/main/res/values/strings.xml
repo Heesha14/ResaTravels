@@ -12,7 +12,13 @@
     <string name="h_user_place_description_n">Nuwara Eliya is a city in the hill country. Nuwara Eliya has a subtropical highland climate.The town\'s attractions include the golf course, trout streams, Victoria Park, and boating or fishing on Lake Gregory. </string>
     <string name="h_user_place_description_k">Kandy is popular due to historical value, colonial heritage, forest cover and tooth relic temple.Due to the beautiful scenery, mild climate, colonial heritage, diverse culture, delicious cuisine, friendly and open-minded people and a lot more, hundreds of thousands of travellers drive to Kandy every day.</string>
     <string name="h_user_place_to_vehicle">RENT A VEHICLE</string>
-    <string name="h_user_search_by_vehicle">Search by Vehicle</string>
+    <string name="h_user_search_by_vehicle">Search Vehicle</string>
+    <string name="h_user_view_vehicle_name1">TOYOTA PREMIO</string>
+    <string name="h_user_view_vehicle_name2">TOYOTA KDH</string>
+    <string name="h_user_view_vehicle_name3">MERCEDES MINIVAN</string>
+    <string name="h_user_view_vehicle_desc_name1">KN-0495  Close to SLIIT Malabe . Maximum 5 passengers. Rs.4000 per day. Contact Suresh 0717109741</string>
+    <string name="h_user_view_vehicle_desc_name2">CAX-0477  Close to Pizza hut Galle Town . Maximum 14 passengers. Rs.15000 per day. Contact Amal 0713109865</string>
+    <string name="h_user_view_vehicle_desc_name3">NB-0484  Close to SLIIT Malabe . Maximum 8 passengers. Rs.9000 per day. Contact Nisal 0717109887</string>
     <string name="h_user_click_vehicle_to_booking">BOOK NOW</string>
     <string name="h_user_book_form_field_place">Place</string>
     <string name="h_user_book_form_field_vehicle">Vehicle</string>
