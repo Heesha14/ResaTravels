@@ -51,7 +51,7 @@
     <string name="h_admin_add_place_input_mobile">Enter contact number</string>
     <string name="h_admin_add_place_input_province">Enter province</string>
     <string name="h_admin_add_place_input_description">Enter description</string>
-    <string name="h_admin_add_place_confirm">ADD PLACE</string>
+    <string name="h_admin_add_place_confirm">SUBMIT</string>
     <string name="h_admin_edit_place_title">EDIT PLACE</string>
     <string name="h_admin_edit_place_input_name">Galle</string>
     <string name="h_admin_edit_place_input_mobile">0713105253</string>
