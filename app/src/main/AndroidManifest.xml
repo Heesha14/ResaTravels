@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Login"></activity>
+        <activity android:name=".Admin_For_All_Safari"></activity>
+        <activity android:name=".Admin_For_All_Hotels" />
+        <activity android:name=".Registration" />
+        <activity android:name=".SafariAllView" />
+        <activity android:name=".Login" />
         <activity android:name=".ViewAHotel" />
         <activity android:name=".All_Hotel_Views" />
         <activity android:name=".MainActivity">

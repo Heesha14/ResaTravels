@@ -17,7 +17,20 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent= new Intent(MainActivity.this, All_Hotel_Views.class);
+                Intent intent= new Intent(MainActivity.this, Registration.class);
+                startActivity(intent);
+            }
+
+
+        });
+
+
+
+        button = (Button)findViewById(R.id.button2);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(MainActivity.this, Admin_For_All_Hotels.class);
                 startActivity(intent);
             }
 

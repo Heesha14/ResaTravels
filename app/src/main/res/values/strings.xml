@@ -16,4 +16,18 @@
     <string name="Rules">Rules</string>
     <string name="strategically_located_in_colombo_cinnamon_red_colombo_offers_modern_and_comfortable_accommodations_with_free_wifi_access_throughout_the_property">Strategically located in Colombo, Cinnamon red Colombo offers modern and comfortable accommodations with free WiFi access throughout the property.</string>
     <string name="marino_beach_colombo_has_a_restaurant_outdoor_swimming_pool_a_fitness_center_and_bar_in_colombo">Marino Beach Colombo has a restaurant, outdoor swimming pool, a fitness center and bar in Colombo.</string>
+    <string name="login_page">Login Page</string>
+    <string name="enter_your_passowrd">Enter Your Passowrd</string>
+    <string name="enter_your_user_name">Enter Your User Name</string>
+    <string name="register_now">Register Now</string>
+    <string name="login">Login</string>
+    <string name="RegisterPage">Register Page</string>
+    <string name="Register">Register</string>
+    <string name="ConfirmYourPassword">Confirm Your Password</string>
+    <string name="you_e_mail_address">You E-mail Address</string>
+    <string name="your_company_service_name">Your Company/Service Name</string>
+    <string name="if_you_have_a_account">If You Have A Account ?</string>
+    <string name="Delete_btn">Delete</string>
+    <string name="Update_Btn">Update</string>
+    <string name="SearchUsingID">Search Using ID Number</string>
 </resources>
