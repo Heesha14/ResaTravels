@@ -1,9 +1,16 @@
 <resources>
     <string name="app_name">ResaTravels</string>
-    <string name="h_home_to_place">Rides in Places</string>
+    <string name="h_home_to_place">PLACES</string>
     <string name="h_user_place_name_galle">Galle</string>
     <string name="h_user_place_name_kandy">Kandy</string>
-    <string name="h_user_place_to_vehicle_courage_text">Rent a vehicle to enjoy the beauty of the place in full spirit without any hustle and bustle...</string>
+    <string name="h_user_place_name_nuwaraeliya">Nuwaraeliya</string>
+    <string name="h_user_place_name_matara">Matara</string>
+    <string name="h_user_place_to_vehicle_courage_text">Explore the Places and rent a vehicle to enjoy the beauty of the place in full spirit without any hustle and bustle...
+                                ***Click the button at the end of the page***</string>
+    <string name="h_user_place_description_galle">Today the Galle Fort is still alive and vibrant and a great place to visit. The Dutch Reformed Church, The Galle Lighthouse,The Historical Mansion Museum ,Temples and Mosques are some of the main places that you must visit.</string>
+    <string name="h_user_place_description_m">Matara is a busy town booming with commercial activities.You must visit Matara atleast ones in your lifetime to know Sri Lanka better.Additionally, the beachfront paints beautiful scenes along the coast of the city.</string>
+    <string name="h_user_place_description_n">Nuwara Eliya is a city in the hill country. Nuwara Eliya has a subtropical highland climate.The town\'s attractions include the golf course, trout streams, Victoria Park, and boating or fishing on Lake Gregory. </string>
+    <string name="h_user_place_description_k">Kandy is popular due to historical value, colonial heritage, forest cover and tooth relic temple.Due to the beautiful scenery, mild climate, colonial heritage, diverse culture, delicious cuisine, friendly and open-minded people and a lot more, hundreds of thousands of travellers drive to Kandy every day.</string>
     <string name="h_user_place_to_vehicle">RENT A VEHICLE</string>
     <string name="h_user_search_by_vehicle">Search by Vehicle</string>
     <string name="h_user_click_vehicle_to_booking">BOOK NOW</string>

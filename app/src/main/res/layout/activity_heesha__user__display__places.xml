@@ -1,182 +1,211 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/header"
-    tools:context=".Heesha_User_Display_Places">
-
-    <View
-android:id="@+id/view2"
-android:layout_width="158dp"
-android:layout_height="44dp"
-android:layout_marginStart="8dp"
-android:background="@drawable/untitled_2"
-app:layout_constraintBottom_toBottomOf="parent"
-app:layout_constraintStart_toStartOf="parent"
-app:layout_constraintTop_toTopOf="parent"
-app:layout_constraintVertical_bias="0.004" />
-
-<View
-android:id="@+id/view3"
-android:layout_width="53dp"
-android:layout_height="53dp"
-android:layout_marginStart="155dp"
-android:background="@drawable/ic_baseline_menu_24"
-app:layout_constraintBottom_toBottomOf="parent"
-app:layout_constraintEnd_toEndOf="parent"
-app:layout_constraintHorizontal_bias="0.725"
-app:layout_constraintStart_toEndOf="@+id/view2"
-app:layout_constraintTop_toTopOf="parent"
-app:layout_constraintVertical_bias="0.0" />
-
-<View
-android:id="@+id/view6"
-android:layout_width="45dp"
-android:layout_height="45dp"
-android:layout_marginStart="16dp"
-android:layout_marginEnd="37dp"
-android:background="@drawable/ic_baseline_home_24"
-app:layout_constraintBottom_toBottomOf="parent"
-app:layout_constraintEnd_toStartOf="@+id/view7"
-app:layout_constraintHorizontal_bias="0.0"
-app:layout_constraintStart_toStartOf="parent"
-app:layout_constraintTop_toTopOf="parent"
-app:layout_constraintVertical_bias="0.097" />
-
-<View
-android:id="@+id/view7"
-android:layout_width="45dp"
-android:layout_height="45dp"
-android:layout_marginEnd="40dp"
-android:background="@drawable/ic_baseline_location_on_24"
-app:layout_constraintBottom_toBottomOf="parent"
-app:layout_constraintEnd_toStartOf="@+id/view8"
-app:layout_constraintTop_toTopOf="parent"
-app:layout_constraintVertical_bias="0.096" />
-
-<View
-android:id="@+id/view8"
-android:layout_width="45dp"
-android:layout_height="45dp"
-android:layout_marginEnd="36dp"
-android:background="@drawable/ic_baseline_shopping_cart_24"
-app:layout_constraintBottom_toBottomOf="parent"
-app:layout_constraintEnd_toStartOf="@+id/view9"
-app:layout_constraintTop_toTopOf="parent"
-app:layout_constraintVertical_bias="0.096" />
-
-    <View
-        android:id="@+id/view9"
-        android:layout_width="45dp"
-        android:layout_height="45dp"
-        android:layout_marginEnd="40dp"
-        android:background="@drawable/ic_baseline_search_24"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/view10"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.096" />
-
-<View
-android:id="@+id/view10"
-android:layout_width="45dp"
-android:layout_height="45dp"
-android:layout_marginEnd="16dp"
-android:background="@drawable/ic_baseline_person_pin_24"
-app:layout_constraintBottom_toBottomOf="parent"
-app:layout_constraintEnd_toEndOf="parent"
-app:layout_constraintTop_toTopOf="parent"
-app:layout_constraintVertical_bias="0.096" />
-
-    <TextView
-        android:id="@+id/h_title_galle"
+    tools:context=".MainActivity">
+    <!--<Button
+        android:id="@+id/button4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="@string/h_user_place_name_galle"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.036"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.228" />
+        android:text="Rent a You" />-->
 
-    <TextView
-        android:id="@+id/h_title_topic"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="PLACES"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.436"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.194" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="vertical"
+        >
 
-    <ImageView
-        android:id="@+id/h_place_galle"
-        android:layout_width="160dp"
-        android:layout_height="155dp"
-        android:src="@drawable/galle"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.051"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.331" />
+        <Button
+            android:id="@+id/h_static_text_title"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:background="#37145C"
+            android:hint="@string/h_home_to_place"
+            android:textColorHint="#FFFFFF"
+            android:textSize="18sp" />
 
-    <TextView
-        android:id="@+id/h_title_kandy"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="@string/h_user_place_name_kandy"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.037"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499" />
 
-    <ImageView
-        android:id="@+id/h_place_kandy"
-        android:layout_width="160dp"
-        android:layout_height="155dp"
-        android:src="@drawable/kandy"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.051"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.682" />
+        <TextView
+            android:id="@+id/h_courage_desc_place_to_vehicle"
+            android:layout_width="wrap_content"
+            android:layout_height="94dp"
+            android:layout_margin="30sp"
+            android:hint="@string/h_user_place_to_vehicle_courage_text"
+            android:textColorHint="#6A6565"
+            android:textSize="16sp" />
 
-    <TextView
-        android:id="@+id/h_go_place_to_vehicle_text"
-        android:layout_width="399dp"
-        android:layout_height="78dp"
-        android:layout_marginStart="4dp"
-        android:hint="@string/h_user_place_to_vehicle_courage_text"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.911" />
 
-    <Button
-        android:id="@+id/h_click_from_place_to_vehicle"
-        android:layout_width="412dp"
-        android:layout_height="53dp"
-        android:background="#37145C"
-        android:hint="@string/h_user_place_to_vehicle"
-        android:textColorHint="#FFFFFF"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.85"
-        app:layout_constraintStart_toStartOf="@+id/h_title_kandy"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp"
+            android:layout_margin="10dp"
+
+
+            >
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@drawable/galle"
+                android:contentDescription="TODO" />
+
+            <TextView
+                android:id="@+id/h_place_name_galle"
+                android:layout_width="70dp"
+                android:layout_height="54dp"
+                android:layout_margin="80sp"
+                android:hint="@string/h_user_place_name_galle"
+                android:textColorHint="#F4EFEF"
+                android:textSize="24sp" />
+
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/h_place_name_galle_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="30sp"
+            android:hint="@string/h_user_place_description_galle"
+            android:textColorHint="#0E0D0D"
+            android:textSize="18sp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp"
+            android:layout_margin="10dp"
+
+
+            >
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@drawable/nuwaraeliya"
+                />
+
+            <TextView
+                android:id="@+id/h_place_name_neliya"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="30sp"
+                android:hint="@string/h_user_place_name_nuwaraeliya"
+                android:textColorHint="#171515"
+                android:textSize="24sp" />
+
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/h_place_name_neliya_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="30sp"
+            android:hint="@string/h_user_place_description_n"
+            android:textColorHint="#0E0E0E"
+            android:textSize="18sp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp"
+            android:layout_margin="10dp"
+
+
+            >
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@drawable/kandy"
+                />
+
+            <TextView
+                android:id="@+id/h_place_name_kandy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20sp"
+                android:hint="@string/h_user_place_name_kandy"
+                android:textColorHint="#090909"
+                android:textSize="24sp" />
+
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/h_place_name_kandy_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="30sp"
+            android:hint="@string/h_user_place_description_k"
+            android:textColorHint="#131313"
+            android:textSize="18sp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp"
+            android:layout_margin="10dp"
+
+
+            >
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@drawable/matara"
+                />
+
+
+
+            <TextView
+                android:id="@+id/h_place_name_matara"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="30sp"
+                android:hint="@string/h_user_place_name_matara"
+                android:textColorHint="#171515"
+                android:textSize="24sp" />
+
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/h_place_name_matara_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="30sp"
+            android:hint="@string/h_user_place_description_m"
+            android:textColorHint="#000000"
+            android:textSize="18sp" />
+
+
+        <Button
+            android:id="@+id/h_click_from_place_to_vehicle"
+            android:layout_width="match_parent"
+            android:layout_height="59dp"
+            android:layout_marginTop="0sp"
+            android:background="#37145C"
+            android:hint="@string/h_user_place_to_vehicle"
+            android:textColorHint="#FFFFFF"
+            android:textSize="18sp" />
+
+
+    </LinearLayout>
+
+
+</androidx.core.widget.NestedScrollView>
