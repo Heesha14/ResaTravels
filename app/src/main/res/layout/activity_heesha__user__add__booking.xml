@@ -267,6 +267,7 @@
         android:layout_height="61dp"
         android:background="#37145C"
         android:hint="@string/h_user_book_form_cancel"
+        android:onClick="User_Cancel_Booking_Display_Vehicles"
         android:textColorHint="#FFFFFF"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
