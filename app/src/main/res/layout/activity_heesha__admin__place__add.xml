@@ -14,6 +14,7 @@
         android:layout_marginEnd="6dp"
         android:layout_marginBottom="1dp"
         android:background="@drawable/untitled_2_copy"
+        android:onClick="redirectToPlace1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -104,6 +105,7 @@
         android:layout_width="184dp"
         android:layout_height="45dp"
         android:hint="@string/h_admin_add_place_title"
+        android:onClick="redirectToPlace1"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -146,7 +148,7 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.146"
+        app:layout_constraintHorizontal_bias="0.092"
         app:layout_constraintStart_toStartOf="@+id/view2"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.611" />
@@ -224,7 +226,12 @@
         android:id="@+id/h_admin_add_place_confirm"
         android:layout_width="408dp"
         android:layout_height="57dp"
+        android:background="#37145C"
         android:hint="@string/h_admin_add_place_confirm"
+        android:onClick="redirectToPlace1"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

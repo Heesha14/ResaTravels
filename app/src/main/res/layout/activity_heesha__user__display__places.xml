@@ -7,17 +7,7 @@
     android:background="@drawable/header"
     tools:context=".Heesha_User_Display_Places">
 
-<View
-android:id="@+id/view"
-android:layout_width="58dp"
-android:layout_height="61dp"
-android:layout_marginEnd="6dp"
-android:layout_marginBottom="1dp"
-android:background="@drawable/untitled_2_copy"
-app:layout_constraintBottom_toBottomOf="parent"
-app:layout_constraintEnd_toEndOf="parent" />
-
-<View
+    <View
 android:id="@+id/view2"
 android:layout_width="158dp"
 android:layout_height="44dp"
@@ -164,27 +154,29 @@ app:layout_constraintVertical_bias="0.096" />
 
     <TextView
         android:id="@+id/h_go_place_to_vehicle_text"
-        android:layout_width="400dp"
-        android:layout_height="68dp"
+        android:layout_width="399dp"
+        android:layout_height="78dp"
         android:layout_marginStart="4dp"
         android:hint="@string/h_user_place_to_vehicle_courage_text"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.867" />
+        app:layout_constraintVertical_bias="0.911" />
 
     <Button
         android:id="@+id/h_click_from_place_to_vehicle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="412dp"
+        android:layout_height="53dp"
+        android:background="#37145C"
         android:hint="@string/h_user_place_to_vehicle"
+        android:textColorHint="#FFFFFF"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.394"
+        app:layout_constraintHorizontal_bias="0.85"
         app:layout_constraintStart_toStartOf="@+id/h_title_kandy"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.976" />
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

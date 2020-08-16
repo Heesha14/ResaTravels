@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".heesha_admin_update_delete_place"></activity>
+        <activity android:name=".Heesha_Admin_Edit_Vehicle"></activity>
+        <activity android:name=".Heesha_Admin_Add_Vehicle" />
+        <activity android:name=".Heesha_Admin_Edit_place" />
         <activity android:name=".Heesha_Admin_Place_Add" />
         <activity android:name=".Heesha_User_Profile" />
         <activity android:name=".Heesha_User_Add_Booking" />
