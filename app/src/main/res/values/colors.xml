@@ -3,4 +3,10 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
+
+    <color name="search_hr">#C7C7C7</color>
+    <color name="page_head_color">#340151</color>
+
+    <color name="yellow">#FAF1E4</color>
+
 </resources>
