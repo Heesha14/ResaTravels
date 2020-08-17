@@ -10,6 +10,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
+        <activity android:name=".TravellingAccessoryCus"></activity>
+        <activity android:name=".AddAccessoryDetailsAdmin" />
+        <activity android:name=".UpdateAccessoryDetailsAdmin" />
+        <activity android:name=".TravellingAccessoryDetailsAdmin2" />
+        <activity android:name=".TravellingAccesssoryAdmin1" />
+        <activity android:name=".TavellingAccessoryInfo" />
+
+
         <activity android:name=".Admin_For_All_Safari"></activity>
         <activity android:name=".Updata_Delete_Availability" />
         <activity android:name=".Add_Availability" />
