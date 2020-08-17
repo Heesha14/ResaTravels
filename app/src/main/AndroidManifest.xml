@@ -9,7 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Heesha_Admin_Edit_Vehicle"></activity>
+        <activity android:name=".Heesha_Admin_List_of_Vehicles"></activity>
+        <activity
+            android:name=".ui.login.Heesha_Admin_List_of_Vehicles"
+            android:label="@string/title_activity_heesha__admin__list_of__vehicles" />
+        <activity android:name=".Heesha_Admin_List_of_Places" />
+        <activity android:name=".Heesha_Admin_Edit_Vehicle" />
         <activity android:name=".Heesha_Admin_Add_Vehicle" />
         <activity android:name=".Heesha_Admin_Edit_place" />
         <activity android:name=".Heesha_Admin_Place_Add" />

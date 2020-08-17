@@ -75,4 +75,12 @@
     <string name="h_admin_edit_vehicle_title">EDIT VEHICLE</string>
     <string name="h_admin_edit_vehicle_update">UPDATE</string>
     <string name="h_admin_edit_vehicle_delete">DELETE</string>
+    <string name="h_admin_list_of_places_title">LIST OF PLACES</string>
+    <string name="h_admin_list_of_places_title2">LIST OF VEHICLES</string>
+    <string name="h_admin_list_of_places_title3">ADD PLACE</string>
+    <string name="title_activity_heesha__admin__list_of__vehicles">Heesha_Admin_List_of_Vehicles</string>
+    <string name="h_admin_list_of_places_title4">SELECT PLACE</string>
+    <string name="h_admin_list_of_vehicles_title3">ADD VEHICLE</string>
+    <string name="h_admin_list_of_vehicles_title4">SELECT VEHICLE</string>
+
 </resources>
