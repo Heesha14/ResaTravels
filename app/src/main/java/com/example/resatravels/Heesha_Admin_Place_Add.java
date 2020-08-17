@@ -15,7 +15,7 @@ public class Heesha_Admin_Place_Add extends AppCompatActivity {
     }
 
     public void redirectToPlace1(View view) {
-        Intent intent1 = new Intent(this, Heesha_Admin_Edit_place.class);
+        Intent intent1 = new Intent(this,Heesha_Admin_List_of_Places.class);
         startActivity(intent1);
     }
 }
