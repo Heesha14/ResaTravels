@@ -9,7 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".register_Vehicle_safari"></activity>
+        <activity android:name=".Admin_For_All_Safari"></activity>
+        <activity android:name=".Updata_Delete_Availability" />
+        <activity android:name=".Add_Availability" />
+        <activity android:name=".Admin_driver_details" />
+        <activity android:name=".rigister_driver" />
+        <activity android:name=".Admin_Safari_Vehicles" />
+        <activity android:name=".register_Vehicle_safari" />
         <activity android:name=".a_safari_vehicle" />
         <activity android:name=".All_Safari_Vehicle" />
         <activity android:name=".Admin_For_All_Hotels" />
