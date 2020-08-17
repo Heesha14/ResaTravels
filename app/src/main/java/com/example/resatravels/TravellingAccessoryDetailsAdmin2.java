@@ -7,29 +7,26 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class TravellingAccessoryDetailsAdmin2 extends AppCompatActivity {
 
     private Button button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_travelling_accessory_details_admin2);
 
-        button = (Button) findViewById(R.id.button5);
+        button = (Button) findViewById(R.id.button12);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openTravellingAccessoryCus();
+                openUpdateTravellingAccessoryDetails();
             }
         });
 
-
     }
 
-    public void openTravellingAccessoryCus(){
-        Intent intent = new Intent (MainActivity.this, TravellingAccessoryCus.class);
+    public void openUpdateTravellingAccessoryDetails(){
+        Intent intent = new Intent (this, UpdateAccessoryDetailsAdmin.class);
         startActivity(intent);
     }
-
-
 }

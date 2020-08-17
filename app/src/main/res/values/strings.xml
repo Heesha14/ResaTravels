@@ -1,3 +1,41 @@
 <resources>
     <string name="app_name">ResaTravels</string>
+    <string name="R_homepage_des">\" Plan Your travel anytime, anywhere... \"</string>
+    <string name="R_homepage_text1">Explore your deal...</string>
+    <string name="R_homepage_hotel">Hotels</string>
+    <string name="R_homepage_rides">Rides in Places</string>
+    <string name="R_homepage_safari">Guide and Safari</string>
+    <string name="R_homepage_accessories">Travelling Accessories</string>
+    <string name="R_travelling_accessories">Travelling Accessories :</string>
+    <string name="R_tent_1">Tent ( Regular )</string>
+    <string name="R_tent_2">Tent (Large )</string>
+    <string name="R_bbq">BBQ Stove (Regular)</string>
+    <string name="R_tent1_price">Rs . 5000 /=</string>
+    <string name="R_tent2_price">Rs . 6000 /=</string>
+    <string name="R_bbq_price">Rs . 3000 /=</string>
+    <string name="R_view">View</string>
+    <string name="R_travelling_acc_info">Travelling Accessory Info</string>
+    <string name="R_des">Description :</string>
+    <string name="R_price">Price :</string>
+    <string name="R_quantity">Quantity :</string>
+    <string name="R_total">Total Amount :</string>
+    <string name="R_view_total">View Total</string>
+    <string name="R_confirm">Confirm</string>
+    <string name="R_cancel">Cancel</string>
+    <string name="R_description">Maximum capacity 4 people, Water proof</string>
+    <string name="R_select_q">Select Quantity</string>
+    <string name="R_add">Add Item</string>
+    <string name="R_aceessory_details">Accessory Details</string>
+    <string name="R_name">Accessory Name :</string>
+    <string name="R_qun">10</string>
+    <string name="R_update">Update</string>
+    <string name="R_delete">Delete</string>
+    <string name="R_update_details">Update Accessory Details</string>
+    <string name="R_add_details">Add Accessory Details</string>
+    <string name="R_save">Save</string>
+    <string name="R_enter_name">Enter Name</string>
+    <string name="R_add_des">Add Description</string>
+    <string name="R_enter_amount">Enter Amount</string>
+    <string name="R_enter_quantity">Enter Quantity</string>
+
 </resources>

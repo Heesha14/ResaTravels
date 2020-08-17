@@ -7,29 +7,25 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class TravellingAccessoryCus extends AppCompatActivity {
 
     private Button button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_travelling_accessory_cus);
 
-        button = (Button) findViewById(R.id.button5);
+        button = (Button) findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openTravellingAccessoryCus();
+                openTravellingAccessoryInfo();
             }
         });
-
-
     }
 
-    public void openTravellingAccessoryCus(){
-        Intent intent = new Intent (MainActivity.this, TravellingAccessoryCus.class);
+    public void openTravellingAccessoryInfo(){
+        Intent intent = new Intent (this, TavellingAccessoryInfo.class);
         startActivity(intent);
     }
-
-
 }
