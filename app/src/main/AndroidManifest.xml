@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity android:name=".Admin_For_All_Safari"></activity>
         <activity android:name=".Updata_Delete_Availability" />
         <activity android:name=".Add_Availability" />
@@ -23,6 +24,21 @@
         <activity android:name=".Login" />
         <activity android:name=".ViewAHotel" />
         <activity android:name=".All_Hotel_Views" />
+
+        <activity android:name=".Heesha_Admin_List_of_Vehicles"></activity>
+        <activity
+            android:name=".ui.login.Heesha_Admin_List_of_Vehicles"
+            android:label="@string/title_activity_heesha__admin__list_of__vehicles" />
+        <activity android:name=".Heesha_Admin_List_of_Places" />
+        <activity android:name=".Heesha_Admin_Edit_Vehicle" />
+        <activity android:name=".Heesha_Admin_Add_Vehicle" />
+        <activity android:name=".Heesha_Admin_Edit_place" />
+        <activity android:name=".Heesha_Admin_Place_Add" />
+        <activity android:name=".Heesha_User_Profile" />
+        <activity android:name=".Heesha_User_Add_Booking" />
+        <activity android:name=".Heesha_User_Display_Vehicles" />
+        <activity android:name=".Heesha_User_Display_Places" />
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

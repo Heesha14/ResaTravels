@@ -2,21 +2,11 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/header"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/header"
-    android:onClick="redirectToPlace"
-    tools:context=".MainActivity">
+    tools:context=".Heesha_Admin_List_of_Vehicles">
 
-    <View
-        android:id="@+id/view"
-        android:layout_width="58dp"
-        android:layout_height="61dp"
-        android:layout_marginEnd="6dp"
-        android:layout_marginBottom="1dp"
-        android:background="@drawable/untitled_2_copy"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
 
     <View
         android:id="@+id/view2"
@@ -100,40 +90,128 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.096" />
 
-    <Button
 
-        android:id="@+id/button1"
+    <TextView
+        android:id="@+id/h_list_vtitle1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/button"
+        android:hint="@string/h_admin_list_of_places_title2"
+        android:textColorHint="#37145C"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.45"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="admin"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.452"
+        app:layout_constraintHorizontal_bias="0.472"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.648" />
+        app:layout_constraintVertical_bias="0.206" />
 
 
-        android:id="@+id/h_home_redirect_place"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="@string/h_home_to_place"
-        android:onClick="redirectToPlace"
+    <Button
+        android:id="@+id/h_go_to_add_vehicle"
+        android:layout_width="229dp"
+        android:layout_height="66dp"
+        android:background="#37145C"
+        android:hint="@string/h_admin_list_of_vehicles_title3"
+        android:onClick="redirectToAddVehicle"
+        android:textColorHint="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.004"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
+    <Button
+        android:id="@+id/h_go_to_list_places"
+        android:layout_width="236dp"
+        android:layout_height="66dp"
+        android:background="#37145C"
+        android:hint="@string/h_admin_list_of_places_title"
+        android:onClick="redirectToListPlaces"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/h_select_to_edit_vehicle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/h_admin_list_of_vehicles_title4"
+        android:onClick="redirectToEditVehicle"
+        android:textColorHint="#37145C"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.892"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.333" />
+
+    <Button
+        android:id="@+id/h_select_to_edit_vehicle1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/h_admin_list_of_vehicles_title4"
+        android:onClick="redirectToEditVehicle"
+        android:textColorHint="#37145C"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.154"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.537" />
+
+    <Button
+        android:id="@+id/h_select_to_edit_vehicle2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/h_admin_list_of_vehicles_title4"
+        android:onClick="redirectToEditVehicle"
+        android:textColorHint="#37145C"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.82"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.781" />
+
+    <ImageView
+        android:id="@+id/h_vehicle_1"
+        android:layout_width="171dp"
+        android:layout_height="178dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.254"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3"
+        app:srcCompat="@drawable/car_premio" />
+
+    <ImageView
+        android:id="@+id/h_vehicle_2"
+        android:layout_width="274dp"
+        android:layout_height="154dp"
+        android:layout_marginTop="332dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/van_kdh" />
+
+    <ImageView
+        android:id="@+id/h_vehicle_3"
+        android:layout_width="194dp"
+        android:layout_height="165dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.073"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.846"
+        app:srcCompat="@drawable/minivan_mercedes" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
