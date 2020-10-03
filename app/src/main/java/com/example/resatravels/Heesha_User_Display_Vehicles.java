@@ -25,7 +25,7 @@ public class Heesha_User_Display_Vehicles extends AppCompatActivity {
     }
 
     private void openHeesha_User_Add_Booking() {
-        Intent intent= new Intent(this, Heesha_User_Add_Booking.class);
+        Intent intent= new Intent(this,Heesha_User_Add_Booking.class);
         startActivity(intent);
     }
 }
