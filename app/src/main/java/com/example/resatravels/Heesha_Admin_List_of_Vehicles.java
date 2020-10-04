@@ -60,12 +60,12 @@ public class Heesha_Admin_List_of_Vehicles extends AppCompatActivity {
                         holder.txtvehicle_type.setText(model.getVehicle_type());
                         holder.txtvehicle_make.setText(model.getVehicle_make());
                         holder.txtvehicle_plate.setText(model.getVehicle_plate());
-                        holder.txtvehicle_location.setText(model.getVehicle_location());
-                        holder.txtvehicle_passenger.setText(model.getVehicle_passenger());
-                        holder.txtvehicle_price.setText(model.getVehicle_price());
+                        holder.txtvehicle_location.setText("Located at : "+model.getVehicle_location());
+                        holder.txtvehicle_passenger.setText(model.getVehicle_passenger() + " maximum passengers");
+                        holder.txtvehicle_price.setText("Rs. "+model.getVehicle_price() + " per day");
                         holder.txtvehicle_desc.setText(model.getVehicle_desc());
-                        holder.txtvehicle_owner.setText(model.getVehicle_owner());
-                        holder.txtvehicle_mobile.setText(model.getVehicle_mobile());
+                        holder.txtvehicle_owner.setText("Owner : "+model.getVehicle_owner());
+                        holder.txtvehicle_mobile.setText("Contact : "+model.getVehicle_mobile());
                         Picasso.get().load(model.getImage()).into(holder.vehicleView1);
 
                     }
