@@ -56,7 +56,7 @@ public class Heesha_Admin_List_of_Vehicles extends AppCompatActivity {
         FirebaseRecyclerAdapter<Heesha_Vehicle, Heesha_Vehicle_View_Holder> adapter =
                 new FirebaseRecyclerAdapter<Heesha_Vehicle, Heesha_Vehicle_View_Holder>(options) {
                     @Override
-                    protected void onBindViewHolder(@NonNull Heesha_Vehicle_View_Holder holder, int position, @NonNull Heesha_Vehicle model) {
+                    protected void onBindViewHolder(@NonNull Heesha_Vehicle_View_Holder holder, int position, @NonNull final Heesha_Vehicle model) {
                         holder.txtvehicle_type.setText(model.getVehicle_type());
                         holder.txtvehicle_make.setText(model.getVehicle_make());
                         holder.txtvehicle_plate.setText(model.getVehicle_plate());
@@ -67,6 +67,16 @@ public class Heesha_Admin_List_of_Vehicles extends AppCompatActivity {
                         holder.txtvehicle_owner.setText("Owner : "+model.getVehicle_owner());
                         holder.txtvehicle_mobile.setText("Contact : "+model.getVehicle_mobile());
                         Picasso.get().load(model.getImage()).into(holder.vehicleView1);
+
+                        holder.vehicleView1.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view)
+                            {
+                                Intent intent = new Intent(Heesha_Admin_List_of_Vehicles.this, Heesha_Maintain_Vehicle.class);
+                                intent.putExtra("vid", model.getVid());
+                                startActivity(intent);
+                            }
+                        });
 
                     }
 

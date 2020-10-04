@@ -14,11 +14,12 @@ public class Heesha_Vehicle {
     private String image;
     private String date1;
     private String time1;
+    private String vid;
 
     public Heesha_Vehicle() {
     }
 
-    public Heesha_Vehicle(String vehicle_type, String vehicle_make, String vehicle_plate, String vehicle_location, String vehicle_passenger, String vehicle_price, String vehicle_desc, String vehicle_owner, String vehicle_mobile, String image, String date1, String time1) {
+    public Heesha_Vehicle(String vehicle_type, String vehicle_make, String vehicle_plate, String vehicle_location, String vehicle_passenger, String vehicle_price, String vehicle_desc, String vehicle_owner, String vehicle_mobile, String image, String date1, String time1,String vid) {
         this.vehicle_type = vehicle_type;
         this.vehicle_make = vehicle_make;
         this.vehicle_plate = vehicle_plate;
@@ -31,6 +32,7 @@ public class Heesha_Vehicle {
         this.image = image;
         this.date1 = date1;
         this.time1 = time1;
+        this.vid = vid;
     }
 
     public String getVehicle_type() {
@@ -39,6 +41,14 @@ public class Heesha_Vehicle {
 
     public void setVehicle_type(String vehicle_type) {
         this.vehicle_type = vehicle_type;
+    }
+
+    public String getVid() {
+        return vid;
+    }
+
+    public void setVid(String vid) {
+        this.vid = vid;
     }
 
     public String getVehicle_make() {

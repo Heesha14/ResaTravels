@@ -209,17 +209,17 @@ public class Heesha_Admin_Place_Add extends AppCompatActivity {
 
     private void SavePlaceInfoToDatabase()
     {
-        HashMap<String, Object> productMap = new HashMap<>();
-        productMap.put("pid", placeRandomKey);
-        productMap.put("date", date);
-        productMap.put("time", time);
-        productMap.put("pname", placeName);
-        productMap.put("province", province);
-        productMap.put("mobile", mobile);
-        productMap.put("description", description);
-        productMap.put("image", downloadImageUrl);
+        HashMap<String, Object> placeMap = new HashMap<>();
+        placeMap.put("pid", placeRandomKey);
+        placeMap.put("date", date);
+        placeMap.put("time", time);
+        placeMap.put("pname", placeName);
+        placeMap.put("province", province);
+        placeMap.put("mobile", mobile);
+        placeMap.put("description", description);
+        placeMap.put("image", downloadImageUrl);
 
-        PlacesRef.child(placeRandomKey).updateChildren(productMap)
+        PlacesRef.child(placeRandomKey).updateChildren(placeMap)
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task)
@@ -227,6 +227,7 @@ public class Heesha_Admin_Place_Add extends AppCompatActivity {
                         if (task.isSuccessful())
                         {
                             Intent intent = new Intent(Heesha_Admin_Place_Add.this, Heesha_Admin_List_of_Places.class);
+                            //intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
                             startActivity(intent);
 
                             loadingBar.dismiss();

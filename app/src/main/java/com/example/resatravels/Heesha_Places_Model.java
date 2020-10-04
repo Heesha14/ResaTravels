@@ -9,11 +9,12 @@ public class Heesha_Places_Model {
    private String image;
    private String date;
    private String time;
+   private String pid;
 
     public Heesha_Places_Model() {
     }
 
-    public Heesha_Places_Model(String place_name, String place_province, String place_mobile, String place_description, String image, String date, String time) {
+    public Heesha_Places_Model(String place_name, String place_province, String place_mobile, String place_description, String image, String date, String time,String pid) {
         this.pname = place_name;
         this.province = place_province;
         this.mobile = place_mobile;
@@ -21,6 +22,7 @@ public class Heesha_Places_Model {
         this.image = image;
         this.date = date;
         this.time = time;
+        this.pid = pid;
     }
 
     public String getPname() {
@@ -30,6 +32,15 @@ public class Heesha_Places_Model {
     public void setPname(String place_name) {
         this.pname = place_name;
     }
+
+    public String getPid() {
+        return pid;
+    }
+
+    public void setPid(String pid) {
+        this.pid = pid;
+    }
+
 
     public String getProvince() {
         return province;

@@ -56,13 +56,23 @@ public class Heesha_Admin_List_of_Places extends AppCompatActivity {
         FirebaseRecyclerAdapter<Heesha_Places_Model, Heesha_Place_View_Holder> adapter =
                 new FirebaseRecyclerAdapter<Heesha_Places_Model, Heesha_Place_View_Holder>(options) {
                     @Override
-                    protected void onBindViewHolder(@NonNull Heesha_Place_View_Holder holder, int position, @NonNull Heesha_Places_Model model)
+                    protected void onBindViewHolder(@NonNull Heesha_Place_View_Holder holder, int position, @NonNull final Heesha_Places_Model model)
                     {
                         holder.txtPlaceName.setText(model.getPname());
                         holder.txtPlaceProvince.setText(model.getProvince());
                         holder.txtPlaceMobile.setText(model.getMobile());
                         holder.txtPlaceDescription.setText(model.getDescription());
                         Picasso.get().load(model.getImage()).into(holder.imageView);
+                        holder.imageView.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+
+                                Intent intent = new Intent(Heesha_Admin_List_of_Places.this, Heesha_Maintain_Places.class);
+                                intent.putExtra("pid", model.getPid());
+                                startActivity(intent);
+                            }});
+
+
 
                     }
 
