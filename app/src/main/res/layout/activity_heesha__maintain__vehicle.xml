@@ -12,42 +12,44 @@ app:cardElevation="50dp">
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/h_input_type"
+    <ImageView
+        android:id="@+id/h_vehicle_image"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="2dp"
+        />
+
+
+    <EditText
+        android:id="@+id/h_input_type_v"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Vehicle Type"
         android:textAlignment="center"
+        android:layout_below="@+id/h_vehicle_image"
         android:textSize="20dp"
         android:textStyle="bold"
         android:textColor="@color/colorPrimary"
         />
 
-    <ImageView
-        android:id="@+id/h_vehicle_image"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_below="@+id/h_input_type"
-        android:scaleType="centerCrop"
-        android:layout_marginTop="2dp"
-        />
 
-    <TextView
-        android:id="@+id/h_input_make"
+    <EditText
+        android:id="@+id/h_input_make_v"
         android:layout_width="189dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/h_vehicle_image"
+        android:layout_below="@+id/h_input_type_v"
         android:layout_marginTop="10dp"
         android:text="Vehicle Make"
         android:textAlignment="center"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="18dp" />
 
-    <TextView
-        android:id="@+id/h_input_plate"
+    <EditText
+        android:id="@+id/h_input_plate_v"
         android:layout_width="184dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/h_input_make"
+        android:layout_below="@+id/h_input_make_v"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="-22dp"
         android:layout_marginEnd="5dp"
@@ -56,11 +58,11 @@ app:cardElevation="50dp">
         android:textColor="@color/colorPrimaryDark"
         android:textSize="16dp" />
 
-    <TextView
-        android:id="@+id/h_input_location"
+    <EditText
+        android:id="@+id/h_input_location_v"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/h_input_plate"
+        android:layout_below="@+id/h_input_plate_v"
         android:text="Vehcile Location "
         android:layout_marginTop="2dp"
         android:textAlignment="center"
@@ -68,22 +70,22 @@ app:cardElevation="50dp">
         android:textColor="@color/colorPrimaryDark"
         />
 
-    <TextView
-        android:id="@+id/h_input_people"
+    <EditText
+        android:id="@+id/h_input_people_v"
         android:layout_width="178dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/h_input_location"
+        android:layout_below="@+id/h_input_location_v"
         android:layout_marginTop="2dp"
         android:text="Vehicle Passengers "
         android:textAlignment="center"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="16dp" />
 
-    <TextView
-        android:id="@+id/h_input_price"
+    <EditText
+        android:id="@+id/h_input_price_v"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/h_input_people"
+        android:layout_below="@+id/h_input_people_v"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="-23dp"
         android:layout_marginEnd="7dp"
@@ -92,11 +94,11 @@ app:cardElevation="50dp">
         android:textColor="@color/colorPrimaryDark"
         android:textSize="16dp" />
 
-    <TextView
-        android:id="@+id/h_input_desc"
+    <EditText
+        android:id="@+id/h_input_desc_v"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/h_input_price"
+        android:layout_below="@+id/h_input_price_v"
         android:text="Vehicle Description "
         android:layout_marginTop="2dp"
         android:textAlignment="center"
@@ -104,26 +106,38 @@ app:cardElevation="50dp">
         android:textColor="@color/colorPrimaryDark"
         />
 
-    <TextView
-        android:id="@+id/h_input_name"
-        android:layout_width="204dp"
-        android:layout_height="33dp"
-        android:layout_below="@+id/h_input_desc"
+    <EditText
+        android:id="@+id/h_input_name_v"
+        android:layout_width="207dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/h_input_desc_v"
         android:layout_marginTop="2dp"
         android:text="Owner Name "
         android:textAlignment="center"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="16dp" />
 
-    <TextView
-        android:id="@+id/h_input_mobile"
-        android:layout_width="175dp"
-        android:layout_height="33dp"
-        android:layout_below="@+id/h_input_name"
+    <EditText
+        android:id="@+id/h_input_mobile_v"
+        android:layout_width="173dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/h_input_name_v"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="-34dp"
-        android:layout_marginEnd="1dp"
+        android:layout_marginTop="-44dp"
+        android:layout_marginEnd="3dp"
         android:text="Owner Mobile "
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="16dp" />
+
+
+    <Button
+        android:id="@+id/h_vehicle_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/h_input_name_v"
+        android:layout_marginTop="2dp"
+        android:text="UPDATE"
         android:textAlignment="center"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="16dp" />
