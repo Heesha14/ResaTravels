@@ -40,28 +40,35 @@
     <string name="R_enter_quantity">Enter Quantity</string>
 
 
-    <string name="button">Button</string> <string name="SearchUsing">Search Using Location</string>
+    <string name="button">Button</string>
+    <string name="SearchUsing">Search Using Location</string>
     <string name="Hotel1">Hotel 1</string>
-    <string name="Hotel2">Hotel 2</string> <string name="Hotel3">Hotel3</string>
+    <string name="Hotel2">Hotel 2</string>
+    <string name="Hotel3">Hotel3</string>
     <string name="marino_beach_colombo">Marino Beach Colombo</string>
     <string name="TheOceanColombo">"The Ocean Colombo "</string>
     <string name="JetwingColomboSevenOpensinnewwindow">Jetwing Colombo Seven Opens in new window</string>
     <string name="Colombo">Colombo</string>
     <string name="hotel_and_resort_registration">Hotel And Resort Registration</string>
     <string name="Description">Description</string>
-    <string name="Facilities">Facilities</string> <string name="Availibility">Availibility</string > <string name="Rules">Rules</string>
+    <string name="Facilities">Facilities</string>
+    <string name="Availibility">Availibility</string>
+    <string name="Rules">Rules</string>
     <string name="strategically_located_in_colombo_cinnamon_red_colombo_offers_modern_and_comfortable_accommodations_with_free_wifi_access_throughout_the_property">Strategically located in Colombo, Cinnamon red Colombo offers modern and comfortable accommodations with free WiFi access throughout the property.</string>
     <string name="marino_beach_colombo_has_a_restaurant_outdoor_swimming_pool_a_fitness_center_and_bar_in_colombo">Marino Beach Colombo has a restaurant, outdoor swimming pool, a fitness center and bar in Colombo.</string>
     <string name="login_page">Login Page</string>
     <string name="enter_your_passowrd">Enter Your Passowrd</string>
-    <string name="enter_your_user_name">Enter Your User Name</string> <string name="register_now">Register Now</string>
+    <string name="enter_your_user_name">Enter Your User Name</string>
+    <string name="register_now">Register Now</string>
     <string name="login">Login</string>
-    <string name="RegisterPage">Register Page</string> <string name="Register">Register</string>
+    <string name="RegisterPage">Register Page</string>
+    <string name="Register">Register</string>
     <string name="ConfirmYourPassword">Confirm Your Password</string>
     <string name="you_e_mail_address">You E-mail Address</string>
     <string name="your_company_service_name">Your Company/Service Name</string>
     <string name="if_you_have_a_account">If You Have A Account ?</string>
-    <string name="Delete_btn">Delete</string> <string name="Update_Btn">Update</string>
+    <string name="Delete_btn">Delete</string>
+    <string name="Update_Btn">Update</string>
     <string name="SearchUsingID">Search Using ID Number</string>
     <string name="Mitsubishi4DR5J44LONGWHEEL1980">Mitsubishi 4DR5 J44 LONG WHEEL 1980</string>
     <string name="passenger_count">Passenger count :</string>
@@ -151,6 +158,59 @@
     <string name="h_admin_list_of_places_title4">SELECT PLACE</string>
     <string name="h_admin_list_of_vehicles_title3">ADD VEHICLE</string>
     <string name="h_admin_list_of_vehicles_title4">SELECT VEHICLE</string>
+    <string name="guidereg">Register for Guide</string>
 
+    <string name="dob">Date of Birth</string>
+    <string name="language">Language</string>
+    <string name="english">English</string>
+    <string name="sinhala">Sinhala</string>
+    <string name="tamil">Tamil</string>
+    <string name="german">German</string>
+    <string name="chiness">Chiness</string>
+    <string name="other">Other</string>
+    <string name="fname">First</string>
+    <string name="name">Name</string>
+    <string name="lname">Last</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="age_">Age</string>
+    <string name="mobile">Mobile</string>
+    <string name="address">Address</string>
+    <string name="email">Email</string>
+    <string name="Experience" />
+    <string name="skills">Skills</string>
+    <string name="guide">Guide</string>
+    <string name="egguide">Edit Guide Details</string>
+    <string name="egupdate">Update</string>
+    <string name="egdelete">Delete</string>
+    <string name="date">Date</string>
+    <string name="insuranceno">Insurance</string>
+    <string name="experiences">In years</string>
+    <string name="searchdriver">Search Driver</string>
+    <string name="btnguide">Guide</string>
+    <string name="btndriver">Driver</string>
+    <string name="language_">Language</string>
+    <string name="dob_">YYYY/MM/DD</string>
+    <string name="email_">example@gmail.com</string>
+    <string name="phone">1234567890</string>
+    <string name="viewguide">View Guide Details</string>
+    <string name="bshowg">Show Guide</string>
+    <string name="showd">Show Driver</string>
+    <string name="gender">Gender :</string>
+    <string name="address_">Address :</string>
+    <string name="email_address">Email Address :</string>
+    <string name="experince">Experince :</string>
+    <string name="other_skills">Other Skills</string>
+    <string name="date_of_birth">Date of Birth :</string>
+    <string name="mobilee">Mobile :</string>
+    <string name="age">Age :</string>
+    <string name="nic">NIC</string>
+    <string name="sguide">Search Guide</string>
+    <string name="experience">Experience</string>
+    <array name="gender">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Not to mention</item>
+    </array>
 
 </resources>
