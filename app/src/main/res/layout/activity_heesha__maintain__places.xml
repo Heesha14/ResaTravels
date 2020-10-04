@@ -82,7 +82,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/h_select_place_btn"
             android:layout_marginTop="2dp"
-            android:text="UPDATE"
+            android:text="DELETE"
             android:textAlignment="center"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="16dp" />

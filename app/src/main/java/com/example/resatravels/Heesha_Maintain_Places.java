@@ -39,7 +39,7 @@ public class Heesha_Maintain_Places extends AppCompatActivity {
         placeID = getIntent().getStringExtra("pid");
 
         placesRef = FirebaseDatabase.getInstance().getReference().child("Heesha_Places_Model").child(placeID);
-        delRef = FirebaseDatabase.getInstance().getReference().child("Heesha_Places_Model").child(placeID);
+        //delRef = FirebaseDatabase.getInstance().getReference().child("Heesha_Places_Model").child(placeID);
 
         applychnagebtn = findViewById(R.id.h_select_place_btn);
         place = findViewById(R.id.h_admin_add_placename);
@@ -63,7 +63,7 @@ public class Heesha_Maintain_Places extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                applychanges();
+                deletePlaceInfo();
 
             }});
 
@@ -141,8 +141,28 @@ public class Heesha_Maintain_Places extends AppCompatActivity {
 
 
     private void deletePlaceInfo(){
+        delRef = FirebaseDatabase.getInstance().getReference().child("Heesha_Places_Model");
+        delRef.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
-        delRef.removeValue();
+                if(dataSnapshot.child(placeID).exists()){
+                    delRef = FirebaseDatabase.getInstance().getReference().child("Heesha_Places_Model").child(placeID);
+                    delRef.removeValue();
+                    Toast.makeText(Heesha_Maintain_Places.this, "deleted  successfully..", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(Heesha_Maintain_Places.this, Heesha_Admin_List_of_Places.class);
+                    startActivity(intent);
+                    finish();
+                }
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
     }
 
 
