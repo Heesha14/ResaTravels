@@ -1,0 +1,91 @@
+{
+  "project_info": {
+    "project_number": "790132901253",
+    "firebase_url": "https://resatravels-849b7.firebaseio.com",
+    "project_id": "resatravels-849b7",
+    "storage_bucket": "resatravels-849b7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:790132901253:android:3ed0110190570a173d70ec",
+        "android_client_info": {
+          "package_name": "com.example.resatravels"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "790132901253-c5i2uoo41vgohqjtutn6p2dd3cm8hn37.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.resatravels",
+            "certificate_hash": "84201cba67000453d58b383f7c7b882eadc113df"
+          }
+        },
+        {
+          "client_id": "790132901253-01k8hsbolfku805n9vencgq075b82gqq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2108ZxasqAukTrdFiyXAvFNyu9XVCryI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "790132901253-01k8hsbolfku805n9vencgq075b82gqq.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "790132901253-gkjt2pmre663a334pi9ipu5a2gcm5b1q.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.nadun"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:790132901253:android:934200e7472cbdb63d70ec",
+        "android_client_info": {
+          "package_name": "com.example.resatravels_nadun"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "790132901253-01k8hsbolfku805n9vencgq075b82gqq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2108ZxasqAukTrdFiyXAvFNyu9XVCryI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "790132901253-01k8hsbolfku805n9vencgq075b82gqq.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "790132901253-gkjt2pmre663a334pi9ipu5a2gcm5b1q.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.nadun"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
