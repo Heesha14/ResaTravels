@@ -76,6 +76,17 @@
             android:textColor="@color/colorPrimaryDark"
             android:textSize="16dp" />
 
+        <Button
+            android:id="@+id/h_delete_place_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/h_select_place_btn"
+            android:layout_marginTop="2dp"
+            android:text="UPDATE"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="16dp" />
+
     </RelativeLayout>
 
 </androidx.cardview.widget.CardView>

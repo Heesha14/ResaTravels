@@ -24,11 +24,11 @@ import android.view.View;
 
 public class Heesha_Maintain_Places extends AppCompatActivity {
 
-    private Button applychnagebtn;
+    private Button applychnagebtn,deletebtn;
     private EditText place,mobile,province,desc;
     private ImageView placeimage;
     private String placeID = "";
-    private DatabaseReference placesRef;
+    private DatabaseReference placesRef,delRef;
 
 
     @Override
@@ -39,6 +39,7 @@ public class Heesha_Maintain_Places extends AppCompatActivity {
         placeID = getIntent().getStringExtra("pid");
 
         placesRef = FirebaseDatabase.getInstance().getReference().child("Heesha_Places_Model").child(placeID);
+        delRef = FirebaseDatabase.getInstance().getReference().child("Heesha_Places_Model").child(placeID);
 
         applychnagebtn = findViewById(R.id.h_select_place_btn);
         place = findViewById(R.id.h_admin_add_placename);
@@ -46,10 +47,19 @@ public class Heesha_Maintain_Places extends AppCompatActivity {
         province = findViewById(R.id.h_admin_add_placeprovince);
         desc = findViewById(R.id.h_admin_add_placedescription);
         placeimage = findViewById(R.id.place_image);
+        deletebtn = findViewById(R.id.h_delete_place_btn);
 
         displayPlaceInfo();
 
         applychnagebtn.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                applychanges();
+
+            }});
+
+        deletebtn.setOnClickListener(new View.OnClickListener(){
 
             @Override
             public void onClick(View v) {
@@ -128,5 +138,13 @@ public class Heesha_Maintain_Places extends AppCompatActivity {
             }
         });
     }
+
+
+    private void deletePlaceInfo(){
+
+        delRef.removeValue();
+    }
+
+
 
 }
