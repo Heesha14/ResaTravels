@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">ResaTravels</string>
+    <string name="add_hotel_form">Add Hotel Form</string>
+    <string name="description">Description</string>
+    <string name="facilities">Facilities</string>
+    <string name="availability">Availability</string>
+    <string name="rules">Rules</string>
+    <string name="name">Name :</string>
+    <string name="hotel_name">Hotel Name</string>
+    <string name="country_prompt">Choose a country</string>
+    <string name="Save">Save</string>
+    <string name="title">Title</string>
+    <string name="Delete">Delete</string>
+    <string-array name="country_arrays">
+        <item>One Star</item>
+        <item>Two Star</item>
+        <item>Three Star</item>
+        <item>Four Star</item>
+        <item>Five Star</item>
+    </string-array>
+</resources>
