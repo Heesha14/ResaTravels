@@ -2,10 +2,10 @@ package com.example.resatravels;
 
 public class Heesha_Places_Model {
 
-   private String place_name;
-   private String place_province;
-   private String place_mobile;
-   private String place_description;
+   private String pname;
+   private String province;
+   private String mobile;
+   private String description;
    private String image;
    private String date;
    private String time;
@@ -14,45 +14,45 @@ public class Heesha_Places_Model {
     }
 
     public Heesha_Places_Model(String place_name, String place_province, String place_mobile, String place_description, String image, String date, String time) {
-        this.place_name = place_name;
-        this.place_province = place_province;
-        this.place_mobile = place_mobile;
-        this.place_description = place_description;
+        this.pname = place_name;
+        this.province = place_province;
+        this.mobile = place_mobile;
+        this.description = place_description;
         this.image = image;
         this.date = date;
         this.time = time;
     }
 
-    public String getPlace_name() {
-        return place_name;
+    public String getPname() {
+        return pname;
     }
 
-    public void setPlace_name(String place_name) {
-        this.place_name = place_name;
+    public void setPname(String place_name) {
+        this.pname = place_name;
     }
 
-    public String getPlace_province() {
-        return place_province;
+    public String getProvince() {
+        return province;
     }
 
-    public void setPlace_province(String place_province) {
-        this.place_province = place_province;
+    public void setProvince(String place_province) {
+        this.province = place_province;
     }
 
-    public String getPlace_mobile() {
-        return place_mobile;
+    public String getMobile() {
+        return mobile;
     }
 
-    public void setPlace_mobile(String place_mobile) {
-        this.place_mobile = place_mobile;
+    public void setMobile(String place_mobile) {
+        this.mobile = place_mobile;
     }
 
-    public String getPlace_description() {
-        return place_description;
+    public String getDescription() {
+        return description;
     }
 
-    public void setPlace_description(String place_description) {
-        this.place_description = place_description;
+    public void setDescription(String place_description) {
+        this.description = place_description;
     }
 
     public String getImage() {

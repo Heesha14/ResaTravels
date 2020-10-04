@@ -11,13 +11,14 @@ public class Heesha_Vehicle {
     private String vehicle_desc;
     private String vehicle_owner;
     private String vehicle_mobile;
+    private String image;
     private String date1;
     private String time1;
 
     public Heesha_Vehicle() {
     }
 
-    public Heesha_Vehicle(String vehicle_type, String vehicle_make, String vehicle_plate, String vehicle_location, String vehicle_passenger, String vehicle_price, String vehicle_desc, String vehicle_owner, String vehicle_mobile, String date1, String time1) {
+    public Heesha_Vehicle(String vehicle_type, String vehicle_make, String vehicle_plate, String vehicle_location, String vehicle_passenger, String vehicle_price, String vehicle_desc, String vehicle_owner, String vehicle_mobile, String image, String date1, String time1) {
         this.vehicle_type = vehicle_type;
         this.vehicle_make = vehicle_make;
         this.vehicle_plate = vehicle_plate;
@@ -27,6 +28,7 @@ public class Heesha_Vehicle {
         this.vehicle_desc = vehicle_desc;
         this.vehicle_owner = vehicle_owner;
         this.vehicle_mobile = vehicle_mobile;
+        this.image = image;
         this.date1 = date1;
         this.time1 = time1;
     }
@@ -117,5 +119,13 @@ public class Heesha_Vehicle {
 
     public void setTime1(String time1) {
         this.time1 = time1;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 }
