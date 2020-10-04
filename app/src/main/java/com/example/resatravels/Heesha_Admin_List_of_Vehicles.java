@@ -68,15 +68,28 @@ public class Heesha_Admin_List_of_Vehicles extends AppCompatActivity {
                         holder.txtvehicle_mobile.setText("Contact : "+model.getVehicle_mobile());
                         Picasso.get().load(model.getImage()).into(holder.vehicleView1);
 
+//                        holder.vehicleView1.setOnClickListener(new View.OnClickListener() {
+//                            @Override
+//                            public void onClick(View view)
+//                            {
+//                                Intent intent = new Intent(Heesha_Admin_List_of_Vehicles.this, Heesha_Maintain_Vehicle.class);
+//                                intent.putExtra("vid", model.getVid());
+//                                startActivity(intent);
+//                            }
+//                        });
+
                         holder.vehicleView1.setOnClickListener(new View.OnClickListener() {
                             @Override
-                            public void onClick(View view)
-                            {
+                            public void onClick(View v) {
+
                                 Intent intent = new Intent(Heesha_Admin_List_of_Vehicles.this, Heesha_Maintain_Vehicle.class);
                                 intent.putExtra("vid", model.getVid());
                                 startActivity(intent);
-                            }
-                        });
+                            }});
+
+
+
+
 
                     }
 

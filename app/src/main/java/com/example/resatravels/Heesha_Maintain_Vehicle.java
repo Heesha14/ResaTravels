@@ -54,6 +54,13 @@ public class Heesha_Maintain_Vehicle extends AppCompatActivity {
 
         displayVehicleInfo();
 
+//        applychangebtn.setOnClickListener(new View.OnClickListener(){
+//
+//            @Override
+//            public void onClick(View v) {
+//                applychanges1();
+//
+//            }});
         applychangebtn.setOnClickListener(new View.OnClickListener(){
 
             @Override
@@ -67,6 +74,7 @@ public class Heesha_Maintain_Vehicle extends AppCompatActivity {
     private void applychanges1(){
         String vType = v_type.getText().toString();
         String vMake = v_make.getText().toString();
+        String vPlate = v_plate.getText().toString();
         String vLocation = v_location.getText().toString();
         String vPassenger = v_passenger.getText().toString();
         String vPrice = v_price.getText().toString();
@@ -80,10 +88,16 @@ public class Heesha_Maintain_Vehicle extends AppCompatActivity {
         else if(vMake.equals("")){
             Toast.makeText(Heesha_Maintain_Vehicle.this, "vMake is added successfully..", Toast.LENGTH_SHORT).show();
         }
+        else if(vPlate.equals("")){
+            Toast.makeText(Heesha_Maintain_Vehicle.this, "vPlate is added successfully..", Toast.LENGTH_SHORT).show();
+        }
         else if(vLocation.equals("")){
             Toast.makeText(Heesha_Maintain_Vehicle.this, "vLocation is added successfully..", Toast.LENGTH_SHORT).show();
         }
         else if(vPassenger.equals("")){
+            Toast.makeText(Heesha_Maintain_Vehicle.this, "vPassenger is added successfully..", Toast.LENGTH_SHORT).show();
+        }
+        else if(vPrice.equals("")){
             Toast.makeText(Heesha_Maintain_Vehicle.this, "vPassenger is added successfully..", Toast.LENGTH_SHORT).show();
         }
         else if(vDesc.equals("")){
@@ -100,15 +114,15 @@ public class Heesha_Maintain_Vehicle extends AppCompatActivity {
 
             HashMap<String, Object> vehicleMap = new HashMap<>();
             vehicleMap.put("vid", vehcileID);
-            vehicleMap.put("vehicle_type", v_type);
-            vehicleMap.put("vehicle_make", v_make);
-            vehicleMap.put("vehicle_plate", v_plate);
-            vehicleMap.put("vehicle_location", v_location);
-            vehicleMap.put("vehicle_passenger", v_passenger);
-            vehicleMap.put("vehicle_price", v_price);
-            vehicleMap.put("vehicle_desc", v_desc);
-            vehicleMap.put("vehicle_owner", v_owner);
-            vehicleMap.put("vehicle_mobile", v_mobile);
+            vehicleMap.put("vehicle_type", vType);
+            vehicleMap.put("vehicle_make", vMake);
+            vehicleMap.put("vehicle_plate", vPlate);
+            vehicleMap.put("vehicle_location", vLocation);
+            vehicleMap.put("vehicle_passenger", vPassenger);
+            vehicleMap.put("vehicle_price", vPrice);
+            vehicleMap.put("vehicle_desc", vDesc);
+            vehicleMap.put("vehicle_owner", vOwner);
+            vehicleMap.put("vehicle_mobile", vMobile);
 
             vehicleRef.updateChildren(vehicleMap).addOnCompleteListener(new OnCompleteListener<Void>() {
                 @Override
@@ -138,7 +152,7 @@ public class Heesha_Maintain_Vehicle extends AppCompatActivity {
                     String vprice = dataSnapshot.child("vehicle_price").getValue().toString();
                     String vdesc = dataSnapshot.child("description").getValue().toString();
                     String vowner = dataSnapshot.child("vehicle_owner").getValue().toString();
-                    String vmobile = dataSnapshot.child("v_mobile").getValue().toString();
+                    String vmobile = dataSnapshot.child("vehicle_mobile").getValue().toString();
                     String vimage = dataSnapshot.child("image").getValue().toString();
 
                     v_type.setText(vtype);
