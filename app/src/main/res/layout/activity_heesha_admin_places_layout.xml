@@ -19,7 +19,7 @@
             android:layout_height="wrap_content"
             android:text="Place"
             android:textAlignment="center"
-            android:textColor="@color/colorPrimary"
+            android:textColor="#111112"
             android:textSize="20dp"
             android:textStyle="bold" />
 
@@ -37,6 +37,7 @@
             android:layout_height="36dp"
             android:layout_below="@+id/place_image"
             android:text="Province"
+            android:textStyle="bold"
             android:textAlignment="center"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="18dp" />
@@ -49,6 +50,7 @@
             android:layout_alignParentEnd="true"
             android:layout_marginTop="-36dp"
             android:layout_marginEnd="0dp"
+            android:textStyle="bold"
             android:text="Mobile"
             android:textAlignment="center"
             android:textColor="@color/colorPrimaryDark"

@@ -35,7 +35,7 @@ public class Heesha_Admin_Add_Vehicle extends AppCompatActivity {
     private String vehicle_type, vehicle_make, vehicle_plate, vehicle_location, vehicle_passenger, vehicle_price,vehicle_desc,vehicle_owner,vehicle_mobile,date2,time2;
     private Button AddVehicleButton;
     private ImageView InputVehicleImage;
-    private EditText InputVehicleType, InputVehicleMake, InputVehiclePlate,InputVehiclePassenger,InputVehiclePrice,InputVehicleDesc,InputVehicleOwner,InputVehicleMobile;
+    private EditText InputVehicleType, InputVehicleMake,InputVehicleLocation, InputVehiclePlate,InputVehiclePassenger,InputVehiclePrice,InputVehicleDesc,InputVehicleOwner,InputVehicleMobile;
     private static final int GalleryPick = 1;
     private Uri ImageUri;
     private String vehicleRandomKey, downloadImageUrl;
@@ -57,6 +57,7 @@ public class Heesha_Admin_Add_Vehicle extends AppCompatActivity {
     InputVehicleType = (EditText) findViewById(R.id.h_input_type);
     InputVehicleMake = (EditText) findViewById(R.id.h_input_make);
     InputVehiclePlate = (EditText) findViewById(R.id.h_input_plate);
+        InputVehicleLocation = (EditText) findViewById(R.id.h_input_location);
     InputVehiclePassenger = (EditText) findViewById(R.id.h_input_people);
     InputVehiclePrice = (EditText) findViewById(R.id.h_input_price);
     InputVehicleDesc = (EditText) findViewById(R.id.h_input_desc);
@@ -109,7 +110,7 @@ public class Heesha_Admin_Add_Vehicle extends AppCompatActivity {
         vehicle_type = InputVehicleType.getText().toString();
         vehicle_make = InputVehicleMake.getText().toString();
         vehicle_plate = InputVehiclePlate.getText().toString();
-        vehicle_location = InputVehicleMake.getText().toString();
+        vehicle_location = InputVehicleLocation.getText().toString();
         vehicle_passenger = InputVehiclePassenger.getText().toString();
         vehicle_price = InputVehiclePrice.getText().toString();
         vehicle_desc = InputVehicleDesc.getText().toString();
