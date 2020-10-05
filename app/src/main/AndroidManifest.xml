@@ -9,11 +9,42 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity android:name=".Heesha_Maintain_Vehicle"></activity>
         <activity android:name=".Heesha_Maintain_Places" />
         <activity android:name=".Heesha_Admin_List_of_Vehicles" /> <!-- <activity -->
         <!-- android:name=".ui.login.Heesha_Admin_List_of_Vehicles" -->
         <!-- android:label="@string/title_activity_heesha__admin__list_of__vehicles" /> -->
+
+
+        <activity android:name=".TravellingAccessoryCus"></activity>
+        <activity android:name=".AddAccessoryDetailsAdmin" />
+        <activity android:name=".UpdateAccessoryDetailsAdmin" />
+        <activity android:name=".TravellingAccessoryDetailsAdmin2" />
+        <activity android:name=".TravellingAccesssoryAdmin1" />
+        <activity android:name=".TavellingAccessoryInfo" />
+
+
+        <activity android:name=".Admin_For_All_Safari"></activity>
+        <activity android:name=".Updata_Delete_Availability" />
+        <activity android:name=".Add_Availability" />
+        <activity android:name=".Admin_driver_details" />
+        <activity android:name=".rigister_driver" />
+        <activity android:name=".Admin_Safari_Vehicles" />
+        <activity android:name=".register_Vehicle_safari" />
+        <activity android:name=".a_safari_vehicle" />
+        <activity android:name=".All_Safari_Vehicle" />
+        <activity android:name=".Admin_For_All_Hotels" />
+        <activity android:name=".Registration" />
+        <activity android:name=".Login" />
+        <activity android:name=".ViewAHotel" />
+        <activity android:name=".All_Hotel_Views" />
+
+        <activity android:name=".Heesha_Admin_List_of_Vehicles"></activity>
+        <activity
+            android:name=".ui.login.Heesha_Admin_List_of_Vehicles"
+            android:label="@string/title_activity_heesha__admin__list_of__vehicles" />
+
         <activity android:name=".Heesha_Admin_List_of_Places" />
         <activity android:name=".Heesha_Admin_Edit_Vehicle" />
         <activity android:name=".Heesha_Admin_Add_Vehicle" />
@@ -23,6 +54,7 @@
         <activity android:name=".Heesha_User_Add_Booking" />
         <activity android:name=".Heesha_User_Display_Vehicles" />
         <activity android:name=".Heesha_User_Display_Places" />
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
