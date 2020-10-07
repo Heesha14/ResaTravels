@@ -32,7 +32,7 @@ import androidx.recyclerview.widget.RecyclerView;
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
-            setContentView(R.layout.activity_heesha__admin__list_of__places);
+            setContentView(R.layout.activity_heesha__user__display__places);
 
             PlacesRef = FirebaseDatabase.getInstance().getReference().child("Heesha_Places_Model");
 

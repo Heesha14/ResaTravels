@@ -72,8 +72,8 @@ public class Heesha_Maintain_Places extends AppCompatActivity {
     private void applychanges(){
         String pplace= place.getText().toString();
         String pmobile = mobile.getText().toString();
-        String pdesc = province.getText().toString();
-        String pprovince = desc.getText().toString();
+        String pprovince = province.getText().toString();
+        String pdesc = desc.getText().toString();
 
         if(pplace.equals("")){
             Toast.makeText(Heesha_Maintain_Places.this, "pplace is added successfully..", Toast.LENGTH_SHORT).show();
@@ -123,8 +123,8 @@ public class Heesha_Maintain_Places extends AppCompatActivity {
                     String pimage = dataSnapshot.child("image").getValue().toString();
 
                     place.setText(pplace);
-                    mobile.setText(pprovince);
-                    province.setText(pmobile);
+                    mobile.setText(pmobile);
+                    province.setText(pprovince);
                     desc.setText(pdescription);
                     Picasso.get().load(pimage).into(placeimage);
 

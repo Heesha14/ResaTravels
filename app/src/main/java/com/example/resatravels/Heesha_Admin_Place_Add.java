@@ -107,7 +107,7 @@ public class Heesha_Admin_Place_Add extends AppCompatActivity {
     private void StorePlaceInformation()
     {
         loadingBar.setTitle("Add New Product");
-        loadingBar.setMessage("Dear Admin, please wait while we are adding the new product.");
+        loadingBar.setMessage("Dear Admin, please wait while we are adding the new place.");
         loadingBar.setCanceledOnTouchOutside(false);
         loadingBar.show();
 
@@ -139,7 +139,7 @@ public class Heesha_Admin_Place_Add extends AppCompatActivity {
             @Override
             public void onSuccess(UploadTask.TaskSnapshot taskSnapshot)
             {
-                Toast.makeText(Heesha_Admin_Place_Add.this, "Product Image uploaded Successfully...", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Heesha_Admin_Place_Add.this, "Place Image uploaded Successfully...", Toast.LENGTH_SHORT).show();
 
                 Task<Uri> urlTask = uploadTask.continueWithTask(new Continuation<UploadTask.TaskSnapshot, Task<Uri>>() {
                     @Override
@@ -161,7 +161,7 @@ public class Heesha_Admin_Place_Add extends AppCompatActivity {
                         {
                             downloadImageUrl = task.getResult().toString();
 
-                            Toast.makeText(Heesha_Admin_Place_Add.this, "got the Product image Url Successfully...", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Heesha_Admin_Place_Add.this, "got the Place image Url Successfully...", Toast.LENGTH_SHORT).show();
 
                             SavePlaceInfoToDatabase();
                         }
@@ -247,5 +247,5 @@ public class Heesha_Admin_Place_Add extends AppCompatActivity {
 
 }
 
-}
+
 
