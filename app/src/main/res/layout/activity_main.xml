@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/buttonHotel"
         android:layout_width="145dp"
         android:layout_height="34dp"
         android:background="#600870"
@@ -25,7 +25,7 @@
         app:layout_constraintVertical_bias="0.038" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/buttonGuideAndSafari"
         android:layout_width="145dp"
         android:layout_height="36dp"
         android:background="#600870"
@@ -42,7 +42,7 @@
         app:layout_constraintVertical_bias="0.529" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/buttonTravellingAcc"
         android:layout_width="170dp"
         android:layout_height="36dp"
         android:background="#600870"
@@ -59,7 +59,7 @@
         app:layout_constraintVertical_bias="0.529" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/buttonRidesInPlaces"
         android:layout_width="161dp"
         android:layout_height="34dp"
         android:background="#600870"

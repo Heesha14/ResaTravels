@@ -84,6 +84,7 @@ public class UpdateAccessoryDetailsAdmin extends AppCompatActivity {
                     snapshot.getRef().child("quantity").setValue(upQuantity.getText().toString());
                     Toast.makeText(UpdateAccessoryDetailsAdmin.this, "Travelling Accessory updated successfully!",Toast.LENGTH_LONG).show();
                     UpdateAccessoryDetailsAdmin.this.finish();
+
                 }
 
             }

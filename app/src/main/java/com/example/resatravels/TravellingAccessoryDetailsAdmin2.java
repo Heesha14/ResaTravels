@@ -19,7 +19,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class TravellingAccessoryDetailsAdmin2 extends AppCompatActivity {
 
-    private Button buttonU,buttonD;
+    private Button buttonU;
     TextView name,description,price,quantity,key1;
     DatabaseReference databaseReference;
     TravellingAccessory travellingAccessory;
@@ -53,18 +53,11 @@ public class TravellingAccessoryDetailsAdmin2 extends AppCompatActivity {
         price.setText(intent.getStringExtra("price"));
         quantity.setText(intent.getStringExtra("quantity"));
 
-        //delete travelling accessory details
-        /*buttonD = (Button) findViewById(R.id.buttonCan);
-        buttonD.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                databaseReference.removeValue();
-            }
-        });*/
+
     }
 
     public void openUpdateTravellingAccessoryDetails(){
-        //TravellingAccessory travellingAccessory = new TravellingAccessory();
+
        Intent intent = new Intent (getApplicationContext(), UpdateAccessoryDetailsAdmin.class);
 
         String keyValue = key1.getText().toString();

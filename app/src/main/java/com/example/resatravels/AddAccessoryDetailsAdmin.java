@@ -70,6 +70,7 @@ public class AddAccessoryDetailsAdmin extends AppCompatActivity {
 
             databaseReference.child(id).setValue(travellingAccessory);
             Toast.makeText(this, "Travelling accessory added successfully!",Toast.LENGTH_LONG).show();
+            AddAccessoryDetailsAdmin.this.finish();
         }
 
 

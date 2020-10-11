@@ -15,18 +15,30 @@ public class ExampleUnitTest {
 
 
     @Before
-    public void setTavellingAccessoryInfo(){
+    public void setUp(){
         tavellingAccessoryInfo = new TavellingAccessoryInfo();
     }
 
     @Test
     public void viewTotal(){
-        //Double result = tavellingAccessoryInfo.viewTotal(1000.0);
-        assertEquals(1000.0, 500.0 * 2 );
-        assertEquals(2000.0, 1000.0 * 2);
-        assertEquals(2500.0, 2500.0 * 1);
-        assertEquals(10000.0, 1000.0 * 10);
+
+        assertEquals(1000.0, 500.0 * 2 ,.2);
+        assertEquals(6000.0, 1000.0 * 6,.2);
+        assertEquals(2500.0, 2500.0 * 1,.2);
+        assertEquals(10000.0, 1000.0 * 10,.2);
     }
+
+    @Test
+    public void confirmOrder(){
+
+        assertEquals(5, 10 - 5);
+        assertEquals(100, 200 - 100);
+        assertEquals(0, 10 - 10);
+        assertEquals(1, 1000 - 999);
+
+    }
+
+
     /*
     @Test
     public void addition_isCorrect() {

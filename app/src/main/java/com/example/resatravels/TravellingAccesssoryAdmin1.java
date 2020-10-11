@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
-import android.widget.TextView;
+
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -50,14 +50,7 @@ public class TravellingAccesssoryAdmin1 extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                /*TravellingAccessory travellingAccessory = list.get(i);
-                Intent intent = new Intent(getApplicationContext(), TravellingAccessoryDetailsAdmin2.class);
 
-                intent.putExtra("name", travellingAccessory.getName());
-                intent.putExtra("description", travellingAccessory.getDescription());
-                intent.putExtra("price", travellingAccessory.getPrice());
-                intent.putExtra("quantity", travellingAccessory.getQuantity());
-                startActivity(intent);*/
 
                 Intent intent = new Intent(TravellingAccesssoryAdmin1.this, TravellingAccessoryDetailsAdmin2.class);
                 TravellingAccessory travellingAccessory = (TravellingAccessory) adapterView.getItemAtPosition(i);
@@ -70,9 +63,8 @@ public class TravellingAccesssoryAdmin1 extends AppCompatActivity {
 
             }
         });
-        ;
-        //final ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,list);
-        //listView.setAdapter(adapter);
+
+
 
     }
 
@@ -111,10 +103,7 @@ public class TravellingAccesssoryAdmin1 extends AppCompatActivity {
         startActivity(intent);
     }
 
-   /* public void openTravellingAccessoryDetailsAdmin2() {
-        Intent intent = new Intent (this, TravellingAccessoryDetailsAdmin2.class);
-        startActivity(intent);
-    }*/
+
 
 
 }

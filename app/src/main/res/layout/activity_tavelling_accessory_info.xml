@@ -134,7 +134,6 @@
         android:layout_width="131dp"
         android:layout_height="43dp"
         android:background="@android:color/holo_purple"
-        android:onClick="viewTotal"
         android:text="@string/R_view_total"
         android:textAllCaps="true"
         android:textColor="#FFFFFF"
@@ -194,6 +193,7 @@
         android:layout_width="94dp"
         android:layout_height="43dp"
         android:background="@color/design_default_color_error"
+        android:onClick="reset"
         android:text="@string/R_cancel"
         android:textAllCaps="true"
         android:textColor="#FFFFFF"
@@ -337,6 +337,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.845" />
+
+    <TextView
+        android:id="@+id/keyCus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="8sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.052"
+        app:layout_constraintStart_toStartOf="@+id/view2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.222" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

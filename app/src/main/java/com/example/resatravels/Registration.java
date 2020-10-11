@@ -79,12 +79,12 @@ public class Registration extends AppCompatActivity {
                                     @Override
                                     public void onComplete(@NonNull Task<Void> task) {
                                         Toast.makeText(Registration.this,"Registration completed successfully!",Toast.LENGTH_LONG).show();
-                                        startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                                        Registration.this.finish();
                                     }
                                 });
                             } else {
 
-                                Toast.makeText(Registration.this,"Registration uncompleted!",Toast.LENGTH_LONG).show();
+                                Toast.makeText(Registration.this,"Error! " + task.getException().getMessage(),Toast.LENGTH_LONG).show();
                             }
                         }
                     });

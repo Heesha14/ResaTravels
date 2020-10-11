@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
         //Toast.makeText(MainActivity.this, "Firebase Connection Successful", Toast.LENGTH_LONG).show();
 
-        button = (Button) findViewById(R.id.button5);
+        button = (Button) findViewById(R.id.buttonTravellingAcc);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -26,24 +25,26 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        button = (Button) findViewById(R.id.button2);
+        /*button = (Button) findViewById(R.id.button2);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 openRegistration();
             }
-        });
+        });*/
 
+        /*
         button = (Button) findViewById(R.id.button4);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 openTravellingAccesssoryAdmin1();
             }
-        });
+        });*/
 
     }
 
+    /*
     private void openRegistration() {
         Intent intent = new Intent (MainActivity.this, Registration.class);
         startActivity(intent);
@@ -52,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
     private void openTravellingAccesssoryAdmin1() {
         Intent intent = new Intent (MainActivity.this, TravellingAccesssoryAdmin1.class);
         startActivity(intent);
-    }
+    }*/
 
     public void openTravellingAccessoryCus(){
         Intent intent = new Intent (MainActivity.this, TravellingAccessoryCus.class);
