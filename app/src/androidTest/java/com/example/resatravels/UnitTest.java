@@ -26,9 +26,6 @@ public class UnitTest {
 //    public void NavigateToSecondActivitys(){
 
 //        assertEquals(54.0, ((5 + 4)*3)*2 ,.1);
-//        assertEquals(6000.0, 1000.0 * 6,.2);
-//        assertEquals(2500.0, 2500.0 * 1,.2);
-//        assertEquals(10000.0, 1000.0 * 10,.2);
  //   }
 
 }

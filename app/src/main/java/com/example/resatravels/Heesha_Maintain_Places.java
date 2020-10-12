@@ -3,32 +3,36 @@ package com.example.resatravels;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-        import android.widget.Button;
-        import android.widget.EditText;
-        import android.widget.ImageView;
-        import android.widget.Toast;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.Toast;
 
-        import com.google.android.gms.tasks.OnCompleteListener;
-        import com.google.android.gms.tasks.Task;
-        import com.google.firebase.database.DataSnapshot;
-        import com.google.firebase.database.DatabaseError;
-        import com.google.firebase.database.DatabaseReference;
-        import com.google.firebase.database.FirebaseDatabase;
-        import com.google.firebase.database.ValueEventListener;
-        import com.squareup.picasso.Picasso;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import com.squareup.picasso.Picasso;
 
-        import java.util.HashMap;
+import java.util.HashMap;
 
 public class Heesha_Maintain_Places extends AppCompatActivity {
 
     private Button applychnagebtn,deletebtn;
     private EditText place,mobile,province,desc;
     private ImageView placeimage;
-    private String placeID = "";
+    private String placeID = "",getPlace;
     private DatabaseReference placesRef,delRef;
+    private String pattern = "^\\s*(?:\\+?(\\d{1,3}))?[-. (]*(\\d{3})[-. )]*(\\d{3})[-. ]*(\\d{4})(?: *x(\\d+))?\\s*$";
+
 
 
     @Override
@@ -80,11 +84,19 @@ public class Heesha_Maintain_Places extends AppCompatActivity {
         else if(pmobile.equals("")){
             Toast.makeText(Heesha_Maintain_Places.this, "mobile cannot be empty..", Toast.LENGTH_SHORT).show();
         }
+        else if (!pmobile.equals("") && !pmobile.matches(pattern))
+        {
+            Toast.makeText(this, "Mobile number is invalid...", Toast.LENGTH_SHORT).show();
+        }
         else if(pdesc.equals("")){
             Toast.makeText(Heesha_Maintain_Places.this, "description cannot be empty..", Toast.LENGTH_SHORT).show();
         }
         else if(pprovince.equals("")){
             Toast.makeText(Heesha_Maintain_Places.this, "province cannot be empty..", Toast.LENGTH_SHORT).show();
+        }
+        else if (!pprovince.equals("") && !((pprovince.equalsIgnoreCase("Southern") || (pprovince.equalsIgnoreCase("Western") || pprovince.equalsIgnoreCase("Central") || (pprovince.equalsIgnoreCase("Western")||pprovince.equalsIgnoreCase("Uva") || (pprovince.equalsIgnoreCase("North Western")||pprovince.equalsIgnoreCase("North Central") || (pprovince.equalsIgnoreCase("Eastern")||pprovince.equalsIgnoreCase("Sabaragamuwa") )))))) )
+        {
+            Toast.makeText(this, "Entered province is invalid", Toast.LENGTH_SHORT).show();
         }
         else
         {
@@ -127,6 +139,8 @@ public class Heesha_Maintain_Places extends AppCompatActivity {
                     desc.setText(pdescription);
                     Picasso.get().load(pimage).into(placeimage);
 
+                    getPlace = pplace;
+
                 }
 
             }
@@ -146,12 +160,7 @@ public class Heesha_Maintain_Places extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
                 if(dataSnapshot.child(placeID).exists()){
-                    delRef = FirebaseDatabase.getInstance().getReference().child("Heesha_Places_Model").child(placeID);
-                    delRef.removeValue();
-                    Toast.makeText(Heesha_Maintain_Places.this, "deleted  successfully..", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(Heesha_Maintain_Places.this, Heesha_Admin_List_of_Places.class);
-                    startActivity(intent);
-                    finish();
+                    alertMessage();
                 }
 
             }
@@ -164,6 +173,39 @@ public class Heesha_Maintain_Places extends AppCompatActivity {
 
     }
 
+
+
+    public void alertMessage(){
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(Heesha_Maintain_Places.this);
+        builder.setPositiveButton("ok", new DialogInterface.OnClickListener(){
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                        delRef = FirebaseDatabase.getInstance().getReference().child("Heesha_Places_Model").child(placeID);
+                        delRef.removeValue();
+                        Toast.makeText(Heesha_Maintain_Places.this, "deleted  successfully..", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(Heesha_Maintain_Places.this, Heesha_Admin_List_of_Places.class);
+                        startActivity(intent);
+                        finish();
+
+                    }
+
+                });
+
+        builder.setNegativeButton("cancel", new DialogInterface.OnClickListener(){
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        Toast.makeText(Heesha_Maintain_Places.this, "cancelled!",Toast.LENGTH_LONG).show();
+
+                    }
+
+                });
+        AlertDialog alert = builder.create();
+        alert.setTitle("Delete Place");
+        alert.setMessage(getPlace + " will be deleted");
+        alert.show();
+    }
 
 
 }
