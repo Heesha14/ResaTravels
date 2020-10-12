@@ -36,7 +36,7 @@ public class Heesha_User_Add_Booking extends AppCompatActivity {
     public static final String TAG1 = "sum";
     private static final String TAG = "display price";
     String result,result2;
-    Button mButton,btn_book_vehicle;
+    Button mButton,btn_book_vehicle,resetBtn;
     EditText mEdit,mEdit2,mEdit3;
     TextView answer,showprice;
     String sum;
@@ -71,6 +71,7 @@ public class Heesha_User_Add_Booking extends AppCompatActivity {
 
         btn_book_vehicle = findViewById(R.id.h_user_book_confirm);
         mButton = findViewById(R.id.btn_total);
+        resetBtn = findViewById(R.id.h_user_book_cancel);
         mEdit = findViewById(R.id.h_user_input_childNo);
         mEdit2 = findViewById(R.id.h_user_input_adultNo);
         mEdit3 = findViewById(R.id.h_user_input_daysNo);
@@ -86,12 +87,12 @@ public class Heesha_User_Add_Booking extends AppCompatActivity {
         InputDays = (EditText) findViewById(R.id.h_user_input_daysNo);
         loadingBar = new ProgressDialog(this);
 
-        mButton.setOnClickListener(new View.OnClickListener(){
+        resetBtn.setOnClickListener(new View.OnClickListener(){
 
             @Override
             public void onClick(View view) {
 
-                NavigateToSecondActivitys();
+                ClearControls();
             }
 
         });
@@ -106,6 +107,16 @@ public class Heesha_User_Add_Booking extends AppCompatActivity {
 
         });
 
+    }
+
+    public void ClearControls() {
+
+        InputPlace.setText("");
+        InputVehicle.setText("");
+        InputCheckDate.setText("");
+        InputNoChild.setText("");
+        InputNoAdult.setText("");
+        InputDays.setText("");
     }
 
     private void fillFields() {
@@ -274,7 +285,7 @@ public class Heesha_User_Add_Booking extends AppCompatActivity {
                             startActivity(intent);
 
                             loadingBar.dismiss();
-                            Toast.makeText(Heesha_User_Add_Booking.this, "Product is added successfully..", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Heesha_User_Add_Booking.this, "Booking successful..", Toast.LENGTH_SHORT).show();
                         }
                         else
                         {
@@ -284,9 +295,11 @@ public class Heesha_User_Add_Booking extends AppCompatActivity {
                         }
                     }
                 });
-
-
     }
 
+    public void redirectToHome(View view) {
+        Intent intent = new Intent(Heesha_User_Add_Booking.this, Heesha_User_View.class);
+        startActivity(intent);
+    }
 
 }
