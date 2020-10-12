@@ -43,6 +43,7 @@ public class Heesha_Admin_Place_Add extends AppCompatActivity {
     private StorageReference PlaceImagesRef;
     private DatabaseReference PlacesRef;
     private ProgressDialog loadingBar;
+    private String pattern = "^\\s*(?:\\+?(\\d{1,3}))?[-. (]*(\\d{3})[-. )]*(\\d{3})[-. ]*(\\d{4})(?: *x(\\d+))?\\s*$";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,6 +84,11 @@ public class Heesha_Admin_Place_Add extends AppCompatActivity {
         startActivity(intent1);
     }
 
+    public void redirectToHome(View view) {
+        Intent intent1 = new Intent(this,Heesha_Admin_View.class);
+        startActivity(intent1);
+    }
+
     private void OpenGallery()
     {
         Intent galleryIntent = new Intent();
@@ -106,7 +112,7 @@ public class Heesha_Admin_Place_Add extends AppCompatActivity {
 
     private void StorePlaceInformation()
     {
-        loadingBar.setTitle("Add New Product");
+        loadingBar.setTitle("Add New Place Image");
         loadingBar.setMessage("Dear Admin, please wait while we are adding the new place.");
         loadingBar.setCanceledOnTouchOutside(false);
         loadingBar.show();
@@ -161,7 +167,7 @@ public class Heesha_Admin_Place_Add extends AppCompatActivity {
                         {
                             downloadImageUrl = task.getResult().toString();
 
-                            Toast.makeText(Heesha_Admin_Place_Add.this, "got the Place image Url Successfully...", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Heesha_Admin_Place_Add.this, "Place image Url Successfully added...", Toast.LENGTH_SHORT).show();
 
                             SavePlaceInfoToDatabase();
                         }
@@ -185,19 +191,27 @@ public class Heesha_Admin_Place_Add extends AppCompatActivity {
         }
         else if (TextUtils.isEmpty(placeName))
         {
-            Toast.makeText(this, "Please write place name...", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please enter place name...", Toast.LENGTH_SHORT).show();
         }
         else if (TextUtils.isEmpty(province))
         {
-            Toast.makeText(this, "Please write place province...", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please enter place province...", Toast.LENGTH_SHORT).show();
+        }
+        else if (!TextUtils.isEmpty(province) && !((province.equalsIgnoreCase("Southern") || (province.equalsIgnoreCase("Western") || province.equalsIgnoreCase("Central") || (province.equalsIgnoreCase("Western")||province.equalsIgnoreCase("Uva") || (province.equalsIgnoreCase("North Western")||province.equalsIgnoreCase("North Central") || (province.equalsIgnoreCase("Eastern")||province.equalsIgnoreCase("Sabaragamuwa") )))))) )
+        {
+            Toast.makeText(this, "Entered province is invalid", Toast.LENGTH_SHORT).show();
         }
         else if (TextUtils.isEmpty(mobile))
         {
-            Toast.makeText(this, "Please write mobile...", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please enter mobile...", Toast.LENGTH_SHORT).show();
+        }
+        else if (!TextUtils.isEmpty(mobile) && !mobile.matches(pattern))
+        {
+            Toast.makeText(this, "Mobile number is invalid...", Toast.LENGTH_SHORT).show();
         }
         else if (TextUtils.isEmpty(description))
         {
-            Toast.makeText(this, "Please write description...", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please enter description...", Toast.LENGTH_SHORT).show();
         }
         else
         {

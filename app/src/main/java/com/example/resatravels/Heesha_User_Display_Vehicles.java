@@ -1,25 +1,21 @@
 package com.example.resatravels;
 
-        import androidx.appcompat.app.AppCompatActivity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
-        import android.content.Intent;
-        import android.os.Bundle;
-        import android.view.LayoutInflater;
-        import android.view.View;
-        import android.view.ViewGroup;
-        import android.widget.ImageView;
-        import android.widget.TextView;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
-        import com.firebase.ui.database.FirebaseRecyclerAdapter;
-        import com.firebase.ui.database.FirebaseRecyclerOptions;
-        import com.google.firebase.database.DatabaseReference;
-        import com.google.firebase.database.FirebaseDatabase;
-        import com.squareup.picasso.Picasso;
-
-
-        import androidx.annotation.NonNull;
-        import androidx.recyclerview.widget.LinearLayoutManager;
-        import androidx.recyclerview.widget.RecyclerView;
+import com.firebase.ui.database.FirebaseRecyclerAdapter;
+import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.squareup.picasso.Picasso;
 
 
 public class Heesha_User_Display_Vehicles extends AppCompatActivity {
@@ -95,6 +91,17 @@ public class Heesha_User_Display_Vehicles extends AppCompatActivity {
 
     public void redirectToEditVehicle(View view) {
         Intent intent = new Intent(this, Heesha_Admin_Edit_Vehicle.class);
+        startActivity(intent);
+    }
+
+
+    public void redirectToSearch(View view){
+        Intent intent2 = new Intent(this, SearchVehicle.class);
+        startActivity(intent2);
+    }
+
+    public void redirectToAddHome(View view){
+        Intent intent = new Intent(this, Heesha_User_View.class);
         startActivity(intent);
     }
 

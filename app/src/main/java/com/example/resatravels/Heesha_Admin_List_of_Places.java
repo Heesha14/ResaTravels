@@ -1,26 +1,21 @@
 package com.example.resatravels;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import com.firebase.ui.database.FirebaseRecyclerAdapter;
-import com.firebase.ui.database.FirebaseRecyclerOptions;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.squareup.picasso.Picasso;
-
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.firebase.ui.database.FirebaseRecyclerAdapter;
+import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.squareup.picasso.Picasso;
 
 public class Heesha_Admin_List_of_Places extends AppCompatActivity {
 
@@ -59,7 +54,7 @@ public class Heesha_Admin_List_of_Places extends AppCompatActivity {
                     protected void onBindViewHolder(@NonNull Heesha_Place_View_Holder holder, int position, @NonNull final Heesha_Places_Model model)
                     {
                         holder.txtPlaceName.setText(model.getPname());
-                        holder.txtPlaceProvince.setText(model.getProvince());
+                        holder.txtPlaceProvince.setText(model.getProvince() + "Province");
                         holder.txtPlaceMobile.setText(model.getMobile());
                         holder.txtPlaceDescription.setText(model.getDescription());
                         Picasso.get().load(model.getImage()).into(holder.imageView);
@@ -89,21 +84,9 @@ public class Heesha_Admin_List_of_Places extends AppCompatActivity {
         adapter.startListening();
     }
 
-
-
-//    public void redirectToListVehicles(View view){
-//        Intent intent2 = new Intent(this, Heesha_Admin_List_of_Vehicles.class);
-//        startActivity(intent2);
-//    }
-//
-//    public void redirectToAddPlace(View view){
-//        Intent intent = new Intent(this, Heesha_Admin_Place_Add.class);
-//        startActivity(intent);
-//    }
-//
-//    public void redirectToEditPlace(View view){
-//        Intent intent = new Intent(this, Heesha_Admin_Edit_place.class);
-//        startActivity(intent);
-//    }
+    public void redirectToAdmin(View view){
+        Intent intent2 = new Intent(this, Heesha_Admin_View.class);
+        startActivity(intent2);
+    }
 
 }

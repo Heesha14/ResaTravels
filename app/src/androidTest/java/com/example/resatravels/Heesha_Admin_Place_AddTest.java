@@ -21,7 +21,7 @@ public class Heesha_Admin_Place_AddTest {
 
     private Heesha_Admin_Place_Add mactivity = null;
 
-    Instrumentation.ActivityMonitor monitor= getInstrumentation().addMonitor(Heesha_Admin_List_of_Places.class.getName(),null,false);
+    Instrumentation.ActivityMonitor monitor= getInstrumentation().addMonitor(Heesha_Admin_View.class.getName(),null,false);
 
     @Before
     public void setUp() throws Exception {
@@ -31,8 +31,8 @@ public class Heesha_Admin_Place_AddTest {
 
     @Test
     public void testLaunchNextActivity(){
-        assertNotNull(mactivity.findViewById(R.id.h_admin_add_place_confirm));
-        onView(withId(R.id.h_admin_add_place_confirm)).perform(click());
+        assertNotNull(mactivity.findViewById(R.id.view6));
+        onView(withId(R.id.view6)).perform(click());
 
         Activity newactivity =  getInstrumentation().waitForMonitorWithTimeout(monitor,5000);
         assertNotNull(newactivity);

@@ -24,11 +24,11 @@ import androidx.annotation.NonNull;
 
 public class Heesha_Maintain_Vehicle extends AppCompatActivity {
 
-    private Button applychangebtn;
+    private Button applychangebtn,deletebtn;
     private EditText v_type,v_make,v_plate,v_location,v_passenger,v_price,v_desc,v_owner,v_mobile;
     private ImageView vehicle_image;
     private String vehcileID = "";
-    private DatabaseReference vehicleRef;
+    private DatabaseReference vehicleRef,delRef;
 
 
     @Override
@@ -51,21 +51,24 @@ public class Heesha_Maintain_Vehicle extends AppCompatActivity {
         v_owner = findViewById(R.id.h_input_name_v);
         v_mobile = findViewById(R.id.h_input_mobile_v);
         vehicle_image = findViewById(R.id.h_vehicle_image);
+        deletebtn = findViewById(R.id.h_vehicle_btn1);
 
-        displayVehicleInfo();
+       displayVehicleInfo();
 
-//        applychangebtn.setOnClickListener(new View.OnClickListener(){
-//
-//            @Override
-//            public void onClick(View v) {
-//                applychanges1();
-//
-//            }});
         applychangebtn.setOnClickListener(new View.OnClickListener(){
 
             @Override
             public void onClick(View v) {
                 applychanges1();
+
+            }});
+
+
+        deletebtn.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                deleteVehicleInfo();
 
             }});
 
@@ -83,28 +86,28 @@ public class Heesha_Maintain_Vehicle extends AppCompatActivity {
         String vMobile = v_mobile.getText().toString();
 
         if(vType.equals("")){
-            Toast.makeText(Heesha_Maintain_Vehicle.this, "vType is empty..", Toast.LENGTH_SHORT).show();
+            Toast.makeText(Heesha_Maintain_Vehicle.this, "Vehicle Type cannot be empty..", Toast.LENGTH_SHORT).show();
         }
         else if(vMake.equals("")){
-            Toast.makeText(Heesha_Maintain_Vehicle.this, "vMake is added successfully..", Toast.LENGTH_SHORT).show();
+            Toast.makeText(Heesha_Maintain_Vehicle.this, "Vehicle Make cannot be empty..", Toast.LENGTH_SHORT).show();
         }
         else if(vPlate.equals("")){
-            Toast.makeText(Heesha_Maintain_Vehicle.this, "vPlate is added successfully..", Toast.LENGTH_SHORT).show();
+            Toast.makeText(Heesha_Maintain_Vehicle.this, "Vehicle Registration Plate cannot be empty..", Toast.LENGTH_SHORT).show();
         }
         else if(vLocation.equals("")){
-            Toast.makeText(Heesha_Maintain_Vehicle.this, "vLocation is added successfully..", Toast.LENGTH_SHORT).show();
+            Toast.makeText(Heesha_Maintain_Vehicle.this, "Location of vehicle cannot be empty..", Toast.LENGTH_SHORT).show();
         }
         else if(vPassenger.equals("")){
-            Toast.makeText(Heesha_Maintain_Vehicle.this, "vPassenger is added successfully..", Toast.LENGTH_SHORT).show();
+            Toast.makeText(Heesha_Maintain_Vehicle.this, "Maximum Passengers cannot be empty..", Toast.LENGTH_SHORT).show();
         }
         else if(vPrice.equals("")){
-            Toast.makeText(Heesha_Maintain_Vehicle.this, "vPassenger is added successfully..", Toast.LENGTH_SHORT).show();
+            Toast.makeText(Heesha_Maintain_Vehicle.this, "Maximum Passengers cannot be empty..", Toast.LENGTH_SHORT).show();
         }
         else if(vDesc.equals("")){
-            Toast.makeText(Heesha_Maintain_Vehicle.this, "vDesc is added successfully..", Toast.LENGTH_SHORT).show();
+            Toast.makeText(Heesha_Maintain_Vehicle.this, "Description cannot be empty..", Toast.LENGTH_SHORT).show();
         }
         else if(vOwner.equals("")){
-            Toast.makeText(Heesha_Maintain_Vehicle.this, "vOwner is added successfully..", Toast.LENGTH_SHORT).show();
+            Toast.makeText(Heesha_Maintain_Vehicle.this, "vehicle Owner cannot be empty..", Toast.LENGTH_SHORT).show();
         }
         else if(vMobile.equals("")){
             Toast.makeText(Heesha_Maintain_Vehicle.this, "vMobile is added successfully..", Toast.LENGTH_SHORT).show();
@@ -128,7 +131,7 @@ public class Heesha_Maintain_Vehicle extends AppCompatActivity {
                 @Override
                 public void onComplete(@NonNull Task<Void> task) {
                     if(task.isSuccessful()){
-                        Toast.makeText(Heesha_Maintain_Vehicle.this, "changes applied successfully..", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Heesha_Maintain_Vehicle.this, "Vehcle updated successfully..", Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(Heesha_Maintain_Vehicle.this, Heesha_Admin_List_of_Vehicles.class);
                         startActivity(intent);
                         finish();
@@ -150,7 +153,7 @@ public class Heesha_Maintain_Vehicle extends AppCompatActivity {
                     String vlocation = dataSnapshot.child("vehicle_location").getValue().toString();
                     String vpassenger = dataSnapshot.child("vehicle_passenger").getValue().toString();
                     String vprice = dataSnapshot.child("vehicle_price").getValue().toString();
-                    String vdesc = dataSnapshot.child("description").getValue().toString();
+                    String vdesc = dataSnapshot.child("vehicle_desc").getValue().toString();
                     String vowner = dataSnapshot.child("vehicle_owner").getValue().toString();
                     String vmobile = dataSnapshot.child("vehicle_mobile").getValue().toString();
                     String vimage = dataSnapshot.child("image").getValue().toString();
@@ -175,6 +178,33 @@ public class Heesha_Maintain_Vehicle extends AppCompatActivity {
 
             }
         });
+    }
+
+
+    private void deleteVehicleInfo(){
+
+        delRef = FirebaseDatabase.getInstance().getReference().child("Heesha_Vehicle");
+        delRef.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                if(dataSnapshot.child(vehcileID).exists()){
+                    delRef = FirebaseDatabase.getInstance().getReference().child("Heesha_Vehicle").child(vehcileID);
+                    delRef.removeValue();
+                    Toast.makeText(Heesha_Maintain_Vehicle.this, "deleted  successfully..", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(Heesha_Maintain_Vehicle.this, Heesha_Admin_List_of_Vehicles.class);
+                    startActivity(intent);
+                    finish();
+                }
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
     }
 
 }

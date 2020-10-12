@@ -39,7 +39,6 @@ public class Heesha_Maintain_Places extends AppCompatActivity {
         placeID = getIntent().getStringExtra("pid");
 
         placesRef = FirebaseDatabase.getInstance().getReference().child("Heesha_Places_Model").child(placeID);
-        //delRef = FirebaseDatabase.getInstance().getReference().child("Heesha_Places_Model").child(placeID);
 
         applychnagebtn = findViewById(R.id.h_select_place_btn);
         place = findViewById(R.id.h_admin_add_placename);
@@ -76,16 +75,16 @@ public class Heesha_Maintain_Places extends AppCompatActivity {
         String pdesc = desc.getText().toString();
 
         if(pplace.equals("")){
-            Toast.makeText(Heesha_Maintain_Places.this, "pplace is added successfully..", Toast.LENGTH_SHORT).show();
+            Toast.makeText(Heesha_Maintain_Places.this, "place cannot be empty..", Toast.LENGTH_SHORT).show();
         }
         else if(pmobile.equals("")){
-            Toast.makeText(Heesha_Maintain_Places.this, "pmobile is added successfully..", Toast.LENGTH_SHORT).show();
+            Toast.makeText(Heesha_Maintain_Places.this, "mobile cannot be empty..", Toast.LENGTH_SHORT).show();
         }
         else if(pdesc.equals("")){
-            Toast.makeText(Heesha_Maintain_Places.this, "pdesc is added successfully..", Toast.LENGTH_SHORT).show();
+            Toast.makeText(Heesha_Maintain_Places.this, "description cannot be empty..", Toast.LENGTH_SHORT).show();
         }
         else if(pprovince.equals("")){
-            Toast.makeText(Heesha_Maintain_Places.this, "pprovince is added successfully..", Toast.LENGTH_SHORT).show();
+            Toast.makeText(Heesha_Maintain_Places.this, "province cannot be empty..", Toast.LENGTH_SHORT).show();
         }
         else
         {
