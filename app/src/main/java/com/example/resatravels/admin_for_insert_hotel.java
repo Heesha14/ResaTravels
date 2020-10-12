@@ -20,6 +20,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class admin_for_insert_hotel extends AppCompatActivity {
     EditText hotelName,hotelId,tel1,email,tel2,street,city,country,postalCode;
     Button btn_save;
+    String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
 
     DatabaseReference dbRef;
     hotel_description hotel_des;
@@ -74,6 +75,12 @@ public class admin_for_insert_hotel extends AppCompatActivity {
                     else if (TextUtils.isEmpty(postalCode.getText().toString()))
                         Toast.makeText(getApplicationContext(), "Empty Postal Code : ", Toast.LENGTH_SHORT).show();
                     else {
+
+                        if (email.getText().toString().trim().matches(emailPattern)) {
+                            hotel_des.setEmail(email.getText().toString().trim());
+                        } else {
+                            Toast.makeText(getApplicationContext(),"Invalid email address", Toast.LENGTH_SHORT).show();
+                        }
                         hotel_des.setHotelName(hotelName.getText().toString().trim());
                         hotel_des.setHotelId(hotelId.getText().toString().trim());
                         hotel_des.setTel1(tel1.getText().toString().trim());
@@ -81,7 +88,6 @@ public class admin_for_insert_hotel extends AppCompatActivity {
                         hotel_des.setStreet(street.getText().toString().trim());
                         hotel_des.setCity(city.getText().toString().trim());
                         hotel_des.setCountry(country.getText().toString().trim());
-                        hotel_des.setEmail(email.getText().toString().trim());
                         hotel_des.setPostalCode(postalCode.getText().toString().trim());
 
                         //dbRef.push().setValue(std);

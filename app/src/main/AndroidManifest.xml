@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".activity_admin_for_facility_delete"></activity>
-        <activity android:name=".user_login" />
+        <activity android:name=".MainActivity" />
         <activity android:name=".Rules" />
         <activity android:name=".activity_admin_for_availability_Update" />
         <activity android:name=".admin_for_availability_insert" />
@@ -20,7 +20,7 @@
         <activity android:name=".Show_Hotels_Admin" />
         <activity android:name=".Admin_For_Update" />
         <activity android:name=".admin_for_delete_hotel" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".user_login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
