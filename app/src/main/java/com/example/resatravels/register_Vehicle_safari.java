@@ -19,7 +19,7 @@ public class register_Vehicle_safari extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent= new Intent(register_Vehicle_safari.this, rigister_driver.class);
+                Intent intent= new Intent(register_Vehicle_safari.this, Register_driver.class);
                 startActivity(intent);
             }
 
