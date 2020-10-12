@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SearchVehicle">
+
+<RelativeLayout
+    android:id="@+id/r5"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:background="#37145C"
+    android:layout_alignParentTop="true">
+
+    <EditText
+        android:id="@+id/search_vehicle_name"
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:hint="Search Vehicle by Model"
+        android:background="@android:color/white"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="5dp"
+        android:padding="9dp"
+        android:textColorHint="@android:color/background_dark"
+        />
+    <Button
+        android:id="@+id/search_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/search_vehicle_name"
+        android:text="SEARCH"
+        android:textSize="16dp"
+        android:layout_centerInParent="true"
+        android:padding="9dp"
+        android:textColor="#37145C"
+
+        />
+
+</RelativeLayout>
+
+<androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/search_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@+id/r5"
+    />
+
+</RelativeLayout>

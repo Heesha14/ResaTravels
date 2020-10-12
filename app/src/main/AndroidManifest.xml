@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Heesha_Admin_View"></activity>
+        <activity android:name=".SearchVehicle"></activity>
+        <activity android:name=".SearchPlace" />
+        <activity android:name=".Heesha_Admin_View" />
         <activity android:name=".Heesha_User_View" />
         <activity android:name=".Heesha_Maintain_Vehicle" />
         <activity android:name=".Heesha_Maintain_Places" />

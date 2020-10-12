@@ -57,7 +57,7 @@ public class Heesha_Admin_Add_Vehicle extends AppCompatActivity {
     InputVehicleType = (EditText) findViewById(R.id.h_input_type);
     InputVehicleMake = (EditText) findViewById(R.id.h_input_make);
     InputVehiclePlate = (EditText) findViewById(R.id.h_input_plate);
-        InputVehicleLocation = (EditText) findViewById(R.id.h_input_location);
+    InputVehicleLocation = (EditText) findViewById(R.id.h_input_location);
     InputVehiclePassenger = (EditText) findViewById(R.id.h_input_people);
     InputVehiclePrice = (EditText) findViewById(R.id.h_input_price);
     InputVehicleDesc = (EditText) findViewById(R.id.h_input_desc);
@@ -123,39 +123,39 @@ public class Heesha_Admin_Add_Vehicle extends AppCompatActivity {
         }
         else if (TextUtils.isEmpty(vehicle_type))
         {
-            Toast.makeText(this, "Please write vehicle type...", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please enter vehicle type...", Toast.LENGTH_SHORT).show();
         }
         else if (TextUtils.isEmpty(vehicle_make))
         {
-            Toast.makeText(this, "Please write vehicle make...", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please enter vehicle make...", Toast.LENGTH_SHORT).show();
         }
         else if (TextUtils.isEmpty(vehicle_plate))
         {
-            Toast.makeText(this, "Please write vehicle plate...", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please enter vehicle plate...", Toast.LENGTH_SHORT).show();
         }
         else if (TextUtils.isEmpty(vehicle_location))
         {
-            Toast.makeText(this, "Please write vehicle location...", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please enter vehicle location...", Toast.LENGTH_SHORT).show();
         }
         else if (TextUtils.isEmpty(vehicle_passenger))
         {
-            Toast.makeText(this, "Please write vehicle passenger...", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please enter vehicle passenger...", Toast.LENGTH_SHORT).show();
         }
         else if (TextUtils.isEmpty(vehicle_price))
         {
-            Toast.makeText(this, "Please write vehicle price...", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please enter vehicle price...", Toast.LENGTH_SHORT).show();
         }
         else if (TextUtils.isEmpty(vehicle_desc))
         {
-            Toast.makeText(this, "Please write vehicle description...", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please enter vehicle description...", Toast.LENGTH_SHORT).show();
         }
         else if (TextUtils.isEmpty(vehicle_owner))
         {
-            Toast.makeText(this, "Please write vehicle owner...", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please enter vehicle owner...", Toast.LENGTH_SHORT).show();
         }
         else if (TextUtils.isEmpty(vehicle_mobile))
         {
-            Toast.makeText(this, "Please write vehicle mobile...", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please enter vehicle mobile...", Toast.LENGTH_SHORT).show();
         }
         else
         {
@@ -166,8 +166,8 @@ public class Heesha_Admin_Add_Vehicle extends AppCompatActivity {
 
     private void StoreVehicleInformation()
     {
-        loadingBar.setTitle("Add New Product");
-        loadingBar.setMessage("Dear Admin, please wait while we are adding the new product.");
+        loadingBar.setTitle("Add New Vehicle");
+        loadingBar.setMessage("Dear Admin, please wait while we are adding the new vehicle.");
         loadingBar.setCanceledOnTouchOutside(false);
         loadingBar.show();
 
@@ -221,7 +221,7 @@ public class Heesha_Admin_Add_Vehicle extends AppCompatActivity {
                         {
                             downloadImageUrl = task.getResult().toString();
 
-                            Toast.makeText(Heesha_Admin_Add_Vehicle.this, "got the Vehicle image Url Successfully...", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Heesha_Admin_Add_Vehicle.this, "Vehicle image Url Successfully added...", Toast.LENGTH_SHORT).show();
 
                             SaveVehicleInfoToDatabase();
                         }
@@ -259,7 +259,7 @@ public class Heesha_Admin_Add_Vehicle extends AppCompatActivity {
                             startActivity(intent);
 
                             loadingBar.dismiss();
-                            Toast.makeText(Heesha_Admin_Add_Vehicle.this, "Product is added successfully..", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Heesha_Admin_Add_Vehicle.this, "Vehicle is added successfully..", Toast.LENGTH_SHORT).show();
                         }
                         else
                         {
