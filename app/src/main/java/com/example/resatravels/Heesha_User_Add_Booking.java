@@ -52,8 +52,7 @@ public class Heesha_User_Add_Booking extends AppCompatActivity {
     private int no_adults,no_children,days;
     private Button AddBookingButton;
     private EditText InputPlace, InputVehicle, InputRegisterPlate,InputCheckDate,InputNoChild,InputNoAdult,InputDays;
-    private String bookingRandomKey, downloadImageUrl;
-   // private DatabaseReference BookingRef;
+    private String bookingRandomKey;
     private ProgressDialog loadingBar;
 
     public void User_Cancel_Booking_Display_Vehicles(View view){
@@ -102,13 +101,30 @@ public class Heesha_User_Add_Booking extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 SearchText = inputText.getText().toString();
-
-                onStart();
+                fillFields();
             }
 
         });
 
     }
+
+    private void fillFields() {
+        String pplace= InputPlace.getText().toString();
+        String pvehicle= InputVehicle.getText().toString();
+        String pplate= inputText.getText().toString();
+        if(pplace.equals("")){
+            Toast.makeText(Heesha_User_Add_Booking.this, "Enter place", Toast.LENGTH_SHORT).show();
+        }
+        else if(pvehicle.equals("")){
+            Toast.makeText(Heesha_User_Add_Booking.this, "Enter Vehicle Type", Toast.LENGTH_SHORT).show();
+        }
+        else if(pplate.equals("")){
+            Toast.makeText(Heesha_User_Add_Booking.this, "Enter Registration Plate", Toast.LENGTH_SHORT).show();
+        }
+        else
+        onStart();
+    }
+
     @Override
     public void onStart() {
         super.onStart();
@@ -125,8 +141,10 @@ public class Heesha_User_Add_Booking extends AppCompatActivity {
                 showprice.setText("Änswer = " + model.getVehicle_price());
                 ans = Integer.parseInt(model.getVehicle_price());
 
-                if(ans <= 0)
+                if(model.getVehicle_price() == null)
+                    //Toast.makeText(Heesha_User_Add_Booking.this, "Invalid Vehicle number",Toast.LENGTH_LONG).show();
                     NavigateToActivitys();
+
                 else
                     NavigateToSecondActivitys();
 
@@ -155,13 +173,14 @@ public class Heesha_User_Add_Booking extends AppCompatActivity {
 
     private void NavigateToActivitys() {
 
-        Toast.makeText(Heesha_User_Add_Booking.this, "Invalid Vehicle number",Toast.LENGTH_LONG).show();
+        if(!InputVehicle.getText().toString().isEmpty())
+            Toast.makeText(Heesha_User_Add_Booking.this, "Invalid Vehicle number",Toast.LENGTH_LONG).show();
     }
 
 
     private void NavigateToSecondActivitys() {
 
-        if(mEdit.getText().toString().isEmpty() || mEdit2.getText().toString().isEmpty()||mEdit3.getText().toString().isEmpty())
+        if(mEdit.getText().toString().isEmpty() || mEdit2.getText().toString().isEmpty()||mEdit3.getText().toString().isEmpty()||InputCheckDate.getText().toString().isEmpty()||InputPlace.getText().toString().isEmpty()||InputVehicle.getText().toString().isEmpty())
             Toast.makeText(Heesha_User_Add_Booking.this, "Fill all  fields!",Toast.LENGTH_LONG).show();
 
         else {
@@ -179,8 +198,7 @@ public class Heesha_User_Add_Booking extends AppCompatActivity {
     public void alertMessage(){
 
         AlertDialog.Builder builder = new AlertDialog.Builder(Heesha_User_Add_Booking.this);
-        builder.setTitle(sum + "    for Booking Confirmation")
-                .setMessage("Thank you")
+        builder.setMessage("Thank you")
                 .setPositiveButton("ok", new DialogInterface.OnClickListener(){
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
@@ -190,8 +208,7 @@ public class Heesha_User_Add_Booking extends AppCompatActivity {
 
                 });
 
-        builder.setTitle(sum + "    Booking Confirmation")
-                .setMessage("Thank you")
+        builder.setMessage("Thank you")
                 .setNegativeButton("cancel", new DialogInterface.OnClickListener(){
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {

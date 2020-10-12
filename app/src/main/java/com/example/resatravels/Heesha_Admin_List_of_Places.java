@@ -54,7 +54,7 @@ public class Heesha_Admin_List_of_Places extends AppCompatActivity {
                     protected void onBindViewHolder(@NonNull Heesha_Place_View_Holder holder, int position, @NonNull final Heesha_Places_Model model)
                     {
                         holder.txtPlaceName.setText(model.getPname());
-                        holder.txtPlaceProvince.setText(model.getProvince() + "Province");
+                        holder.txtPlaceProvince.setText(model.getProvince() + " Province");
                         holder.txtPlaceMobile.setText(model.getMobile());
                         holder.txtPlaceDescription.setText(model.getDescription());
                         Picasso.get().load(model.getImage()).into(holder.imageView);
