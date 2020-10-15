@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "128160256432",
+    "firebase_url": "https://resatravels-5adeb.firebaseio.com",
+    "project_id": "resatravels-5adeb",
+    "storage_bucket": "resatravels-5adeb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:128160256432:android:d3fd32a7c291ed8e3bc675",
+        "android_client_info": {
+          "package_name": "com.example.resatravels"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "128160256432-rhp1ui90i2mkrg3gmu0bbe4a686atvte.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWfhNMbk70QRGAar5RtM3hI2mojXZuMWU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "128160256432-rhp1ui90i2mkrg3gmu0bbe4a686atvte.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
