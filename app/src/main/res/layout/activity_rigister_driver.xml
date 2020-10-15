@@ -21,24 +21,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.328" />
 
-    <Button
-        android:id="@+id/brdsubmit"
-        android:layout_width="180dp"
-        android:layout_height="30dp"
-        android:background="@color/design_default_color_primary"
-        android:shadowColor="@color/colorAccent"
-        android:text="Submit Details"
-        android:textAllCaps="true"
-        android:textColor="@color/design_default_color_background"
-        android:textColorLink="@color/design_default_color_background"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.831"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.977" />
-
     <TextView
         android:id="@+id/textView28"
         android:layout_width="94dp"
@@ -422,9 +404,14 @@
 
     <Button
         android:id="@+id/btncancel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="83dp"
+        android:layout_height="40dp"
+        android:background="@color/design_default_color_primary"
+        android:shadowColor="@color/colorAccent"
         android:text="Button"
+        android:textAllCaps="true"
+        android:textColor="@color/design_default_color_background"
+        android:textColorLink="@color/design_default_color_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.191"
@@ -432,4 +419,21 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.976" />
 
+    <Button
+        android:id="@+id/brdsubmit"
+        android:layout_width="179dp"
+        android:layout_height="40dp"
+        android:background="@color/design_default_color_primary"
+        android:shadowColor="@color/colorAccent"
+        android:text="Submit Details"
+        android:textAllCaps="true"
+        android:textColor="@color/design_default_color_background"
+        android:textColorLink="@color/design_default_color_background"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.831"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.977" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,6 +2,7 @@ package com.example.resatravels;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -15,6 +16,7 @@ public class Register_driver extends AppCompatActivity {
     Spinner pspinner;
     Button pbregister;
     DatabaseReference databaseReference;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,11 +42,18 @@ public class Register_driver extends AppCompatActivity {
             public void onClick(View v) {
                 databaseReference = FirebaseDatabase.getInstance().getReference().child("Resa Travel").child("Driver");
 
-
-
               /*  //modified= if error occor change this
                 databaseReference= (DatabaseReference) FirebaseDatabase.getInstance().getReference("Travel").child("Guide").orderByChild("pfirst");*/
                 int no;
+                //email validation
+                String em =
+                        "^(([\\w-]+\\.)+[\\w-]+|([a-zA-Z]{1}|[\\w-]{2,}))@"
+                                +"((([0-1]?[0-9]{1,2}|25[0-5]|2[0-4][0-9])\\.([0-1]?"
+                                +"[0-9]{1,2}|25[0-5]|2[0-4][0-9])\\."
+                                +"([0-1]?[0-9]{1,2}|25[0-5]|2[0-4][0-9])\\.([0-1]?"
+                                +"[0-9]{1,2}|25[0-5]|2[0-4][0-9])){1}|"
+                                +"([a-zA-Z]+[\\w-]+\\.)+[a-zA-Z]{2,4})$";
+                String ph = "^[0-9]{10}$";
                 try {
                     if (TextUtils.isEmpty(pfirst.getText().toString()))
                         Toast.makeText(getApplicationContext(), "Empty first name", Toast.LENGTH_SHORT).show();
@@ -56,14 +65,10 @@ public class Register_driver extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(), "Empty gender", Toast.LENGTH_SHORT).show();
                     else if (TextUtils.isEmpty(pdob.getText().toString()))
                         Toast.makeText(getApplicationContext(), "Empty date of birth", Toast.LENGTH_SHORT).show();
-                    else if (TextUtils.isEmpty(pmobile.getText().toString()))
-                        Toast.makeText(getApplicationContext(), "Empty Contact number", Toast.LENGTH_SHORT).show();
-                    else if (TextUtils.isEmpty(pemail.getText().toString()))
-                        Toast.makeText(getApplicationContext(), "Empty email", Toast.LENGTH_SHORT).show();
-                    else if (TextUtils.isEmpty(paddress.getText().toString()))
-                        Toast.makeText(getApplicationContext(), "Empty address", Toast.LENGTH_SHORT).show();
-                    else if (TextUtils.isEmpty(pexperience.getText().toString()))
-                        Toast.makeText(getApplicationContext(), "Empty experience", Toast.LENGTH_SHORT).show();
+                    else if (TextUtils.isEmpty(pmobile.getText().toString()) || !pmobile.getText().toString().matches(ph))
+                        Toast.makeText(getApplicationContext(), "Invalid Contact number", Toast.LENGTH_SHORT).show();
+                    else if (TextUtils.isEmpty(pemail.getText().toString()) || !pemail.getText().toString().matches(em))
+                        Toast.makeText(getApplicationContext(), "Invalid email", Toast.LENGTH_SHORT).show();
                     else if (TextUtils.isEmpty(pskills.getText().toString()))
                         Toast.makeText(getApplicationContext(), "Empty skills", Toast.LENGTH_SHORT).show();
                     else if (TextUtils.isEmpty(pinsurance.getText().toString()))
@@ -82,7 +87,7 @@ public class Register_driver extends AppCompatActivity {
                         String experience = pexperience.getText().toString().trim();
                         String skills = pskills.getText().toString().trim();
                         String id = databaseReference.push().getKey();
-                        RegisterDriver driver = new RegisterDriver(id, fname, lname, no, insurance, gender, dob, mobile, email, address,  experience, skills);
+                        RegisterDriver driver = new RegisterDriver(id, fname, lname, no, insurance, gender, dob, mobile, email, address, experience, skills);
                         databaseReference.child(id).setValue(driver);
                         Toast.makeText(getApplicationContext(), "Successfully inserted", Toast.LENGTH_SHORT).show();
                     }
@@ -93,3 +98,15 @@ public class Register_driver extends AppCompatActivity {
         });
     }
 }
+/*
+    //email validation
+    private boolean validateemail(EditText pemail) {
+        String inemail = pemail.getText().toString();
+        if (!inemail.isEmpty() && Patterns.EMAIL_ADDRESS.matcher(inemail).matches()) {
+            return true;
+        } else {
+            Toast.makeText(getApplicationContext(), "Invalid email", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+    }
+*/
