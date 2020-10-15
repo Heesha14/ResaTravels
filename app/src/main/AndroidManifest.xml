@@ -17,6 +17,13 @@
         <activity android:name=".ActivityRetrieveGuide" />
         <activity android:name=".ActivityAdminGuide" />
         <activity android:name=".ActivityRegisterGuide" />
+        <activity android:name=".SearchVehicle"></activity>
+        <activity android:name=".SearchPlace" />
+        <activity android:name=".Heesha_Admin_View" />
+        <activity android:name=".Heesha_User_View" />
+        <activity android:name=".Heesha_Maintain_Vehicle" />
+        <activity android:name=".Heesha_Maintain_Places" />
+        <activity android:name=".Heesha_Admin_List_of_Vehicles" />
         <activity android:name=".TravellingAccessoryCus" />
         <activity android:name=".AddAccessoryDetailsAdmin" />
         <activity android:name=".UpdateAccessoryDetailsAdmin" />

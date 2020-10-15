@@ -1,34 +1,63 @@
 {
   "project_info": {
+
     "project_number": "128160256432",
     "firebase_url": "https://resatravels-5adeb.firebaseio.com",
     "project_id": "resatravels-5adeb",
     "storage_bucket": "resatravels-5adeb.appspot.com"
+    "project_number": "790132901253",
+    "firebase_url": "https://resatravels-849b7.firebaseio.com",
+    "project_id": "resatravels-849b7",
+    "storage_bucket": "resatravels-849b7.appspot.com"
+>>>>>>> origin/IT19243672_Praveena
   },
   "client": [
     {
       "client_info": {
+<<<<<<< HEAD
         "mobilesdk_app_id": "1:128160256432:android:d3fd32a7c291ed8e3bc675",
+
+        "mobilesdk_app_id": "1:790132901253:android:3ed0110190570a173d70ec",
+>>>>>>> origin/IT19243672_Praveena
         "android_client_info": {
           "package_name": "com.example.resatravels"
         }
       },
       "oauth_client": [
         {
+<<<<<<< HEAD
           "client_id": "128160256432-rhp1ui90i2mkrg3gmu0bbe4a686atvte.apps.googleusercontent.com",
+
+          "client_id": "790132901253-c5i2uoo41vgohqjtutn6p2dd3cm8hn37.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.resatravels",
+            "certificate_hash": "84201cba67000453d58b383f7c7b882eadc113df"
+          }
+        },
+        {
+          "client_id": "790132901253-01k8hsbolfku805n9vencgq075b82gqq.apps.googleusercontent.com",
+>>>>>>> origin/IT19243672_Praveena
           "client_type": 3
         }
       ],
       "api_key": [
         {
+<<<<<<< HEAD
           "current_key": "AIzaSyAWfhNMbk70QRGAar5RtM3hI2mojXZuMWU"
+      "current_key": "AIzaSyD2108ZxasqAukTrdFiyXAvFNyu9XVCryI"
+>>>>>>> origin/IT19243672_Praveena
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
+<<<<<<< HEAD
               "client_id": "128160256432-rhp1ui90i2mkrg3gmu0bbe4a686atvte.apps.googleusercontent.com",
+
+              "client_id": "790132901253-01k8hsbolfku805n9vencgq075b82gqq.apps.googleusercontent.com",
+>>>>>>> origin/IT19243672_Praveena
               "client_type": 3
             }
           ]
