@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/accessoryName"
+            android:layout_width="250dp"
+            android:layout_height="43dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#000"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.9"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.081" />
+
+        <TextView
+            android:id="@+id/currencyType"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="@string/R_rupees"
+            android:textColor="@color/design_default_color_on_secondary"
+            android:textSize="22sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/price"
+            app:layout_constraintHorizontal_bias="0.948"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/accessoryName"
+            app:layout_constraintVertical_bias="0.01" />
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="195dp"
+            android:layout_height="30dp"
+            android:textColor="#0B0A0A"
+            android:textSize="22sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.925"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/accessoryName"
+            app:layout_constraintVertical_bias="0.01" />
+
+        <ImageView
+            android:id="@+id/imageView12"
+            android:layout_width="88dp"
+            android:layout_height="87dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.049"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.086"
+            app:srcCompat="@drawable/accessoryclipart" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </RelativeLayout>
+
+
